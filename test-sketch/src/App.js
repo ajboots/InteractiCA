@@ -13,21 +13,30 @@ let board
 //the precompted next board
 let next
 //control constants
-let mouse_mode = false
+let mouse_mode = 0
 let is_pause = false
 let slider
-
+let width = 270
+let height = 400
+let cnv
+let skip_step = false
+function mouseClicked(_p5, event) {
+  console.log(event)
+}
 function App() {
-    const setup = (p5, canvasParentRef) => {
+
+  const setup = (p5, canvasParentRef) => {
+
+    //set up canvas and canvas interactivity
+    cnv = p5.createCanvas(width, height).parent(canvasParentRef)
+
     // Set simulation framerate to 10 to avoid flickering
-    
     p5.frameRate(10)
-    p5.createCanvas(720, 400)
+
     // Calculate columns and rows
     columns = p5.floor(p5.width / w)
     rows = p5.floor(p5.height / w)
     // JS 2D array
-    console.log(columns)
     board = Array(columns)
     for (let i = 0; i < columns; i++) {
       board[i] = Array(rows)
@@ -44,19 +53,38 @@ function App() {
     randomStatebutton.position(100, 0)
     randomStatebutton.mousePressed(new_board)
     slider = p5.createSlider(2, 15, 10, 1)
-    new_board(p5)
+    new_board()
   }
   
   function pause_sim() {
     is_pause = !is_pause
   }
 
+  const mousePressed = (p5 , event) => {
+    if (board[ p5.floor(event.clientX / w)][p5.floor(event.clientY / w)] === 1) {
+      mouse_mode = 0
+    }
+    else {
+      mouse_mode = 1
+    }
+    toggle(p5 , event)
+  }
+  // reset board when mouse is pressed
+  const mouseDragged = (p5 , event) => {
+    toggle(p5 , event)
+  }
+  function toggle(p5 , event) {
+    board[ p5.floor(event.clientX / w)][p5.floor(event.clientY / w)] = mouse_mode
+    skip_step = true
+    p5.redraw()
+  }
   const draw = p5 => {
     p5.frameRate(slider.value())
     p5.background(255)
-    if(!is_pause) {
+    if(!is_pause && !skip_step) {
        generate()
     }
+    skip_step = false
     for ( let i = 0; i < columns;i++) {
       for ( let j = 0; j < rows;j++) {
         if ((board[i][j] === 1)) p5.fill(0)
@@ -67,27 +95,14 @@ function App() {
     }
   
   }
-
-  const mousePressed = (p5, canvasParentRef) => {
-    mouse_mode = !board[ p5.floor(canvasParentRef.mouseX / w)][p5.floor(canvasParentRef.mouseY / w)]
-    toggle(p5,canvasParentRef) 
-  }
-  // reset board when mouse is pressed
-  const mouseDragged = (p5, canvasParentRef) => {
-    toggle(p5,canvasParentRef) 
-  }
-  function toggle(p5,canvasParentRef) {
-      board[ p5.floor(canvasParentRef.mouseX / w)][p5.floor(canvasParentRef.mouseY / w)] = mouse_mode
-  
-  }
   // Fill board randomly
-  function new_board(p5) {
+  function new_board() {
     for (let i = 0; i < columns; i++) {
       for (let j = 0; j < rows; j++) {
         // Lining the edges with 0s
         if (i === 0 || j === 0 || i === columns-1 || j === rows-1) board[i][j] = 0
         // Filling the rest randomly
-        else board[i][j] = p5.floor(p5.random(2))
+        else board[i][j] = Math.floor(Math.random() * 2)
         next[i][j] = 0
       }
     }
@@ -123,7 +138,7 @@ function App() {
     board = next
     next = temp
   }
-  return <Sketch setup={setup} draw={draw} />
+  return <Sketch setup={setup} draw={draw} mousePressed={mousePressed}  mouseDragged={mouseDragged} />
 }
 
 export default App;
