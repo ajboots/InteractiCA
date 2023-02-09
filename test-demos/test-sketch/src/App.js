@@ -1,5 +1,8 @@
 import './App.css';
 
+//here, we specify using the "react" and "react-p5" libraries
+//react is a frontend javascript library 
+//react-p5 is connects react to p5.js a drawing tool used to display the demos
 import React from 'react'
 import Sketch from 'react-p5'
 
@@ -16,13 +19,13 @@ let next
 let mouse_mode = 0
 let is_pause = false
 let slider
+//height and width of the drawing on the webpage
 let width = 270
 let height = 400
+//global reference to the canvas
 let cnv
 let skip_step = false
-function mouseClicked(_p5, event) {
-  console.log(event)
-}
+
 function App() {
 
   const setup = (p5, canvasParentRef) => {
@@ -46,20 +49,24 @@ function App() {
     for (let i = 0; i < columns; i++) {
       next[i] = Array(rows)
     }
+    //these buttons will show up on the UI
     let pausebutton = p5.createButton('Toggle Pause')
     pausebutton.position(0, 0)
+    //this is where we tell the putton what function to call when pressed
     pausebutton.mousePressed(pause_sim)
     let randomStatebutton = p5.createButton('Random State')
     randomStatebutton.position(100, 0)
     randomStatebutton.mousePressed(new_board)
-    slider = p5.createSlider(2, 15, 10, 1)
+    //slider is created with (minimum), (maximum), (starting value), (increment value)
+    //**  try changing the first field to 1 to get the simulation to run slower! **//
+    slider = p5.createSlider(1, 15, 10, 1)
     new_board()
   }
-  
+  //this is the function called by the button labeled (toggle pause) on the UI
   function pause_sim() {
     is_pause = !is_pause
   }
-
+  //when the mouse is pressed, this function is called
   const mousePressed = (p5 , event) => {
     if (board[ p5.floor(event.clientX / w)][p5.floor(event.clientY / w)] === 1) {
       mouse_mode = 0
@@ -74,22 +81,30 @@ function App() {
     toggle(p5 , event)
   }
   function toggle(p5 , event) {
+    //this function toggles the cells to the "mouse_mode" which is set to be opposite of the tile clicked in the "mousePressed" funciton
     board[ p5.floor(event.clientX / w)][p5.floor(event.clientY / w)] = mouse_mode
+    //this code redraws the state instantly so the canged cell can be seen, but makes it so the simulation doesnt run that frame
+    //** try removing the line below this comment and changing cells, can you guess what will happen? **//
     skip_step = true
     p5.redraw()
   }
   const draw = p5 => {
+    //this chunk generates a new step of the simulation
     p5.frameRate(slider.value())
-    p5.background(255)
     if(!is_pause && !skip_step) {
        generate()
     }
     skip_step = false
+    //this step looks at each row and column of the table and colors the cells accordingly
     for ( let i = 0; i < columns;i++) {
       for ( let j = 0; j < rows;j++) {
-        if ((board[i][j] === 1)) p5.fill(0)
-        else p5.fill(255)
-        p5.stroke(240)
+        //the following three lines of code define the colors for an "on" "off" and the table outlines respectivly 
+        //the colors are defined with (Red), (Green), (Blue), (Alpha) with limits of 0 - 255
+        //** try defining your own colors for the simulation! **//
+        if ((board[i][j] === 1)) p5.fill(0,0,0,255)
+        else p5.fill(255,255,255,255)
+        p5.stroke(240,240,240,240)
+        //this defines the rectangles position and size of the screen. 
         p5.rect(i * w, j * w, w-1, w-1)
       }
     }
@@ -126,18 +141,20 @@ function App() {
         // we added it in the above loop
         neighbors -= board[x][y];
         // Rules of Life
-        if      ((board[x][y] === 1) && (neighbors <  2)) next[x][y] = 0           // Loneliness
-        else if ((board[x][y] === 1) && (neighbors >  3)) next[x][y] = 0           // Overpopulation
-        else if ((board[x][y] === 0) && (neighbors === 3)) next[x][y] = 1           // Reproduction
-        else                                             next[x][y] = board[x][y] // Stasis
+        //** Try changing some of these numbers! **/
+        if      ((board[x][y] === 1) && (neighbors  <  2)) next[x][y] = 0           // Loneliness      (turns cell off)
+        else if ((board[x][y] === 1) && (neighbors  >  3)) next[x][y] = 0           // Overpopulation  (turns cell off)
+        else if ((board[x][y] === 0) && (neighbors === 3)) next[x][y] = 1           // Reproduction    (turns cell on)
+        else                                               next[x][y] = board[x][y] // Stasis          (nothing happens)
       }
     }
   
-    // Swap!
+    // Swap boards!
     let temp = board
     board = next
     next = temp
   }
+  //export the functions that need UI information so react can know about them
   return <Sketch setup={setup} draw={draw} mousePressed={mousePressed}  mouseDragged={mouseDragged} />
 }
 
