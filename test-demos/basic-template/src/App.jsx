@@ -147,7 +147,7 @@ function App() {
 
   return (
     <div>
-      <h1>Template for Initial Interative Cellular Automata Demo</h1>
+      <h1>Template for Initial Interactive Cellular Automata Demo</h1>
       <Sketch setup={setup} draw={draw} mousePressed={mousePressed}  mouseDragged={mouseDragged} />
       <CodeMirror
       value="console.log('hello world!');"
