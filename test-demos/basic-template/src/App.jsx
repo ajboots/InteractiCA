@@ -157,5 +157,4 @@ function App() {
   //export the functions that need UI information so react can know about them
   return <Sketch setup={setup} draw={draw} mousePressed={mousePressed}  mouseDragged={mouseDragged} />
 }
-
 export default App;
