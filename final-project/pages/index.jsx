@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 import Toast from 'react-bootstrap/Toast';
-
+import ThemeSwitcher from './themeSwitch';
 const ExampleToast = ({ children }) => {
   const [show, toggleShow] = useState(true);
 
@@ -25,7 +25,10 @@ const ExampleToast = ({ children }) => {
 
 export default function Page1() {
   return (
+    
     <div className={styles.container}>
+                    
+
       <Head>
         <title>Cellular Education</title>
         <link rel="icon" href="/images/favicon.ico" />
@@ -61,7 +64,7 @@ export default function Page1() {
 
           {/* <SandBox title="Pulsar" hidedevtools="1" expanddevtools="1" hidenavigation="1"  link="https://codesandbox.io/embed/conways-step-6mojjc"></SandBox> */}
           <h2>Oscillators</h2>
-          <div class="flexbox-container">
+          <div className="flexbox-container">
             <div><iframe src="https://codesandbox.io/embed/conways-step-6mojjc"
               style={{ width: "450px", height: "475px", border: "0" }}
               title="Conway&#039;s Step"
@@ -76,15 +79,12 @@ export default function Page1() {
               <p>What is the period of the Pulsar pattern?</p>
               <p>&nbsp;</p>
               <p>Use the "step" button in the interactive panel to step through the simulation</p>
-              <p>[&nbsp;1&nbsp;]&nbsp;&nbsp;&nbsp;[&nbsp;2&nbsp;]&nbsp;&nbsp;&nbsp;[&nbsp;3&nbsp;]&nbsp;&nbsp;&nbsp;[&nbsp;4&nbsp;]&nbsp;&nbsp;&nbsp;</p>
-              <p>&nbsp;</p>
-              <p>Correct! You have to click the button 3 times to see the same period, so the period is three</p>
-
+              <ThemeSwitcher></ThemeSwitcher>
             </div>
           </div>
 
           <h2>Spaceships</h2>
-          <div class="flexbox-container">
+          <div className="flexbox-container">
             <div><iframe src="https://codesandbox.io/embed/conways-glider-g3lwrq"
               style={{ width: "450px", height: "350px", border: "0" }}
               title="Conway&#039;s Step"
@@ -99,9 +99,7 @@ export default function Page1() {
               <p>What is the period of this spaceship?</p>
               <p>&nbsp;</p>
               <p>Use the "step" button in the interactive panel to step through the simulation</p>
-              <p>[&nbsp;1&nbsp;]&nbsp;&nbsp;&nbsp;[&nbsp;2&nbsp;]&nbsp;&nbsp;&nbsp;[&nbsp;3&nbsp;]&nbsp;&nbsp;&nbsp;[&nbsp;4&nbsp;]&nbsp;&nbsp;&nbsp;</p>
-              <p>&nbsp;</p>
-              <p>Correct! You have to click the button 3 times to see the same period, so the period is three</p>
+              <ThemeSwitcher></ThemeSwitcher>
 
             </div>
           </div>
