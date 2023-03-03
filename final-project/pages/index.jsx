@@ -1,15 +1,34 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css';
-import Step from '../components/step';
-import SandBox from '../components/sandbox';
 import TableOfContents from '../components/toc';
+import Button from 'react-bootstrap/Button';
+// Importing the Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from 'react';
+import Toast from 'react-bootstrap/Toast';
 
-export default function Home() {
+const ExampleToast = ({ children }) => {
+  const [show, toggleShow] = useState(true);
+
+  return (
+    <>
+      {!show && <Button onClick={() => toggleShow(true)}>Show Toast</Button>}
+      <Toast show={show} onClose={() => toggleShow(false)}>
+        <Toast.Header>
+          <strong className="mr-auto">React-Bootstrap</strong>
+        </Toast.Header>
+        <Toast.Body>{children}</Toast.Body>
+      </Toast>
+    </>
+  );
+};
+
+export default function Page1() {
   return (
     <div className={styles.container}>
       <Head>
         <title>Cellular Education</title>
-        <link rel="icon" href="/images/favicon.ico" /> 
+        <link rel="icon" href="/images/favicon.ico" />
       </Head>
 
       <main>
@@ -23,7 +42,10 @@ export default function Home() {
           </p>
         </header>
 
-        
+        <h1 className="header">Welcome To React-Bootstrap</h1>
+        <ExampleToast>
+          This is the answer to the question
+        </ExampleToast>
 
         <div className={styles.content}>
           <TableOfContents></TableOfContents>
@@ -32,16 +54,64 @@ export default function Home() {
           <h2>Why should I learn about Cellular Automata?</h2>
           <p>Brief Description.</p>
           <h2>What is this project?</h2>
-          <p>Brief Description.</p>
+          <h1>Lesson 1: Basics of Cellular automata</h1>
+          <p>This is for Christopher</p>
 
-          <h1>Lesson 1: The Basics of Cellular Automata</h1>
+          <h1>Lesson 2: Conway's Game of Life</h1>
 
-          <p>Example text.</p>
+          {/* <SandBox title="Pulsar" hidedevtools="1" expanddevtools="1" hidenavigation="1"  link="https://codesandbox.io/embed/conways-step-6mojjc"></SandBox> */}
+          <h2>Oscillators</h2>
+          <div class="flexbox-container">
+            <div><iframe src="https://codesandbox.io/embed/conways-step-6mojjc"
+              style={{ width: "450px", height: "475px", border: "0" }}
+              title="Conway&#039;s Step"
+              allow=""
+              sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+            ></iframe></div>
+            <div><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></div>
 
-          
-          
-          <SandBox title="Conway's Game of Life Demo" link="https://codesandbox.io/embed/conways-game-of-life-vxsmmm"></SandBox>
-          
+            <div>
+              <p>Some patterns repeat, these are known as oscillators</p>
+              <p>A period is the amount of steps it takes for a pattern to repeat</p>
+              <p>What is the period of the Pulsar pattern?</p>
+              <p>&nbsp;</p>
+              <p>Use the "step" button in the interactive panel to step through the simulation</p>
+              <p>[&nbsp;1&nbsp;]&nbsp;&nbsp;&nbsp;[&nbsp;2&nbsp;]&nbsp;&nbsp;&nbsp;[&nbsp;3&nbsp;]&nbsp;&nbsp;&nbsp;[&nbsp;4&nbsp;]&nbsp;&nbsp;&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>Correct! You have to click the button 3 times to see the same period, so the period is three</p>
+
+            </div>
+          </div>
+
+          <h2>Spaceships</h2>
+          <div class="flexbox-container">
+            <div><iframe src="https://codesandbox.io/embed/conways-glider-g3lwrq"
+              style={{ width: "450px", height: "350px", border: "0" }}
+              title="Conway&#039;s Step"
+              allow=""
+              sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+            ></iframe></div>
+            <div><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></div>
+
+            <div>
+              <p>Some patterns move predictably, these are known as spaceships </p>
+              <p>Spaceships move forever as long as there is space for them</p>
+              <p>What is the period of this spaceship?</p>
+              <p>&nbsp;</p>
+              <p>Use the "step" button in the interactive panel to step through the simulation</p>
+              <p>[&nbsp;1&nbsp;]&nbsp;&nbsp;&nbsp;[&nbsp;2&nbsp;]&nbsp;&nbsp;&nbsp;[&nbsp;3&nbsp;]&nbsp;&nbsp;&nbsp;[&nbsp;4&nbsp;]&nbsp;&nbsp;&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>Correct! You have to click the button 3 times to see the same period, so the period is three</p>
+
+            </div>
+          </div>
+
+          <iframe src="https://codesandbox.io/embed/conways-game-of-life-vxsmmm"
+            style={{ width: "80%", height: "500px", border: "0" }}
+            title="Conway&#039;s Step"
+            allow=""
+            sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+          ></iframe>
         </div>
       </main>
 
@@ -51,3 +121,5 @@ export default function Home() {
     </div>
   )
 }
+
+
