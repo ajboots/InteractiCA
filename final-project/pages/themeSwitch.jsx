@@ -11,19 +11,19 @@ const ThemeSwitcher = () => {
     return (
         <div className="mb-2">
 
-                <Button onClick={() => setText("YOU ARE WRONG AND SHOULD FEEL BAD")}>
+                <Button onClick={() => setText("Not quite, try stepping through the simulation again")}>
                 &nbsp;&nbsp;1&nbsp;&nbsp;
                 </Button>
                 &nbsp;&nbsp;
-                <Button onClick={() => setText("YOU ARE WRONG AND SHOULD FEEL BAD")}>
+                <Button onClick={() => setText("Not quite, try stepping through the simulation again")}>
                 &nbsp;&nbsp;2&nbsp;&nbsp;
                 </Button>
                 &nbsp;&nbsp;
-                <Button onClick={() => setText("YOU ARE {(right)} AND {(should not)} FEEL BAD")}>
+                <Button onClick={() => setText("Yes! Good job, every three ocillations the pattern repeats")}>
                 &nbsp;&nbsp;3&nbsp;&nbsp;
                 </Button>
                 &nbsp;&nbsp;
-                <Button onClick={() => setText("YOU ARE WRONG AND SHOULD FEEL BAD")}>
+                <Button onClick={() => setText("Not quite, try stepping through the simulation again")}>
                 &nbsp;&nbsp;4&nbsp;&nbsp;
                 </Button>                
                 <p>                   
