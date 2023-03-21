@@ -1,3 +1,48 @@
+.pages {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.scrollable-content {
+  height: 1000px; /* Set the height of your vertically scrolling content here */
+}
+.page {
+  flex-shrink: 0;
+  width: 100vw;
+  height: 80vh;
+  scroll-snap-align: start;
+}
+.content {
+  width: 400vw;
+  max-width: 1900px;
+  height: 100vh;
+  max-height: 1000px;
+  overflow-y: scroll;
+}
+/* Optional styles to customize the appearance of the pages */
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.page:nth-of-type(1) {
+  background-color: #1abc9c;
+}
+
+.page:nth-of-type(2) {
+  background-color: #2ecc71;
+}
+
+.page:nth-of-type(3) {
+  background-color: #3498db;
+}
+
 html,
 body {
   padding: 0;
