@@ -14,27 +14,34 @@ function Page3() {
     <div className="page">
       <div className="content">
         <div className="scrollable-content">
-          <h1>Lesson 3: Other Applications</h1>
+          <h1>Lesson 3: Cellular Automata Implementations</h1>
+
           <Row>
             <h2>Cellular Automata in 3D!</h2>
-            <YouTube videoId="dQJ5aEsP6Fs" opts={opts} />
             <p>What sorts of applications could this have?</p>
+            
+            <Col sm={4}>
+              <YouTube videoId="dQJ5aEsP6Fs" opts={opts} />
+            </Col>
+            <Col sm={4}>
+              <YouTube videoId="IbVi5VSapFs" opts={opts} />
+            </Col>
+            <Col>
+            <YouTube videoId="XA7DHeVb0go" opts={opts} />
+            </Col>
           </Row>
           <p>&nbsp;</p>
           <p>&nbsp;</p>
           <Row>
-            <h2>Cellular behaving organically!</h2>
-            <YouTube videoId="NPlAEnGX4Dg" opts={opts} />
-          </Row>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <Row>
-            <h2>Advanced Multi-naibourhoood Cellular Automata!</h2>
+            <h2>Advanced Cellular Automata behaving organically!</h2>
             <Col sm={4}>
               <YouTube videoId="nT_TyDbKLdU" opts={opts} />
             </Col>
-            <Col>
+            <Col sm={4}>
               <YouTube videoId="aAQ5jicbt7I" opts={opts} />
+            </Col>
+            <Col>
+            <YouTube videoId="NPlAEnGX4Dg" opts={opts} />
             </Col>
           </Row>
         </div>

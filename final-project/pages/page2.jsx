@@ -65,12 +65,17 @@ function Page2() {
             sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
           ></iframe>
           <div>
-            <p>Now that you've messed around with the simulation, lets hack it!! </p>
-            <p>For this lesson, we've been using Conway's rules. Lets change that. </p>
+            <p>Now that you've messed around with the simulation, lets hack it!! In this lesson, we've been using Conway's rules. Lets change that. </p>
+            <p>This guide covers how to transform the code into 2 different interesting states, expirement to find your own!</p>
+            <p>&nbsp;</p>
+            <p>Maze Generator:</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1: If it's not already, expand the code editor with the slider to the left of the simulation</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2: On line 62, change the right side of the equality statement from "&& neighbors &gt; 3" to "&& neighbors &gt; 4"</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3: Hit the refresh button in the very bottom left of the simulation panel to see your change applied"</p>
-            <p>With a one character change, we've drastically changed the behavior of the simulation. Try on your own to find other interesting rules</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3: Hit the refresh button in the very bottom left of the simulation panel to see your change applied</p>
+            <p>Cave Generator:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1: Go to line 62, and comment it out with 'ctrl + /'</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2: On line 60, change the right side of the equality statement from "&& neighbors &lt; 2" to "&& neighbors &lt; 4"</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3: On line 64, change the right side of the equality statement from "&& neighbors === 3" to "&& neighbors &gt; 4"</p>
             <p>Use 'ctrl + f' to find the '**' in the code. These are interesting lines of code to change </p>
           </div>
         </div>
