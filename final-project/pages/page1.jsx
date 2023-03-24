@@ -28,31 +28,21 @@ function Page1() {
     <div className="content">
       <div className="scrollable-content">
       <div className={styles.container}>
-                    <Head>
-                      <title>Cellular Education</title>
-                      <link rel="icon" href="/images/favicon.ico" />
-                    </Head>
-              
+
                     <main>
                       <header className={styles.heading}>
-                        <h1 className={styles.title}>
-                          Interactive Cellular Education
-                        </h1>
-              
-                        <p className={styles.description}>
-                          Interactive education about cellular automata.
-                        </p>
+                      Lesson 1: Basics of Cellular automata
                       </header>
               
                       <div className={styles.content}>
                         {/* <TableOfContents></TableOfContents> */}
+                        <p>This is for Christopher</p>
                         <h2>What is Cellular Automata?</h2>
                         <p>Brief Description.</p>
                         <h2>Why should I learn about Cellular Automata?</h2>
                         <p>Brief Description.</p>
                         <h2>What is this project?</h2>
-                        <h1>Lesson 1: Basics of Cellular automata</h1>
-                        <p>This is for Christopher</p>
+
               
                         
               
@@ -60,9 +50,9 @@ function Page1() {
                       </div>
                     </main>
               
-                    <footer>
+                    <header>
                       Interactive Cellular Automata. Created by Alex Boots & Christopher Fields.
-                    </footer>
+                    </header>
                   </div>
       </div>
     </div>
