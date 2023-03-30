@@ -6,22 +6,46 @@
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
-.scrollable-content {
-  height: 1000px; /* Set the height of your vertically scrolling content here */
-}
+
 .page {
   flex-shrink: 0;
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
   scroll-snap-align: start;
 }
 .content {
   width: 400vw;
-  max-width: 2600px;
+  max-width: 2830px;
   height: 100vh;
-  max-height: 1000px;
+  max-height: 1230px;
   overflow-y: scroll;
+  direction: ltr;
+  background-color:#d7e9fd;
 }
+ 
+/*This cause the division content
+to be displayed from right to left */
+.Flipped{
+    direction: ltr;
+}
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: gainsboro;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 5px;
+}
+
 /* Optional styles to customize the appearance of the pages */
 .page {
   display: flex;

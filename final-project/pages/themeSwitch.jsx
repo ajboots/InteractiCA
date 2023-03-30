@@ -10,7 +10,7 @@ const ThemeSwitcher = () => {
 
     return (
         <div className="mb-2">
-
+&emsp;
                 <Button onClick={() => setText("Not quite, try stepping through the simulation again")}>
                 &nbsp;&nbsp;1&nbsp;&nbsp;
                 </Button>
