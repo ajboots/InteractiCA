@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/lesson2.css" rel="stylesheet">
+    <link href="/css/common.css" rel="stylesheet">
+    <script src="/js/lesson2.js" type="module" defer></script>
+    <script src="/js/common.js" type="module" defer></script>
+    <title>Lesson 2 - Interactive Cellular Automata</title>
+</head>
+<body>
+    <header>
+        <img class="hamburger-menu" src="/images/menu-button.png">
+        <h1><a href="/">Interactive Cellular Automata</a></h1>
+        <image class="info-button" src="/images/info-button.png"></image>
+    </header>
+
+    <div class="menu">
+        <div class="close">
+            <img class="close-button" src="/images/close-button.png">
+        </div>
+        <div class="links">
+            <a href="/lesson1">Lesson 1 - Cellular Automata Basics</a>
+            <a href="/lesson2">Lesson 2 - 2D Cellular Automata</a>
+            <a href="/lesson3">Lesson 3 - Applications</a>
+            <a href="/implementations">Further Exploration & Implementations</a>
+        </div>  
+    </div>
+
+    <main>
+        <img class="left arrow" src="images/arrow-button.png">
+        <div class="content">
+            <h1>Lesson 2: Conway's Game of Life</h1>
+
+            <p>Throughout this lesson, we will investigate unique patterns in Conway's game of life then, let you play with the simulation, then modify it!</p>
+
+            <p>Learning objectives: Identify a periods pattern and gain understanding of pattern stability</p>
+
+            <p>Use the "step" button in the interactive panel to step through the simulation</p>
+
+            <div class="examples">
+                <div>
+                    <h2>Oscillators</h2>
+                    <iframe src="https://codesandbox.io/embed/conways-step-6mojjc"
+                        style="width:450px;height: 475px; border:0"
+                        title="Conway&#039;s Step"
+                        allow=""
+                        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
+                    </iframe>
+                    <p>Repeating patterns are known as oscillators</p>
+                    <p>The steps to repeat is an oscillator's period</p>
+                    <p>What is the period of the Pulsar pattern?</p>
+                    <div>
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <p>Quiz not implemented yet -> Carry this over from old project</p>
+                    </div> 
+                </div>
+
+                <div>
+                    <h2>Spaceships</h2>
+                    <iframe src="https://codesandbox.io/embed/conways-glider-g3lwrq"
+                        style="width:450px;height: 475px; border:0"
+                        title="Conway&#039;s Step"
+                        allow=""
+                        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
+                    </iframe>
+                    <p>Moving repeating patterns are known as spaceships</p>
+                    <p>Spaceships come in many shapes and sizes</p>
+                    <p>What is the period of this spaceship?</p>
+                    <div>
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <p>Quiz not implemented yet -> Carry this over from old project</p>
+                    </div> 
+                </div>
+                
+                <div>
+                    <h2>Glider Guns --Not Implemented--</h2>
+                    <iframe src="https://codesandbox.io/embed/conways-glider-g3lwrq"
+                        style="width:450px;height: 475px; border:0"
+                        title="Conway&#039;s Step"
+                        allow=""
+                        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
+                    </iframe>
+                    <p>Glider guns are oscillators that make spaceships</p>
+                    <p>The first glider gun won a $50 prize ($400 today)</p>
+                    <p>What is the period of this gliders this gun makes? (it's 4)</p>
+                    <div>
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <p>Quiz not implemented yet -> Carry this over from old project</p>
+                    </div> 
+                </div>  
+            </div>     
+        </div>
+        <img class="right arrow" src="images/arrow-button.png">
+    </main>
+</body>
+</html>

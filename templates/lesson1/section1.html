@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/lesson1.css" rel="stylesheet">
+    <link href="/css/common.css" rel="stylesheet">
+    <script src="/js/lesson1/section1.js" type="module" defer></script>
+    <script src="/js/common.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script> <!-- for p5.js library-->
+    <script src="js/sketches/sketch1.js"></script>
+    <title>Lesson 1.1: Cells - Interactive Cellular Automata</title>
+</head>
+<body>
+    <!-- *********** COMMON ELEMENTS *********** -->
+    <header>
+        <img class="hamburger-menu" src="/images/menu-button.png">
+        <h1><a href="/">Interactive Cellular Automata</a></h1>
+        <image class="info-button" src="/images/info-button.png"></image>
+    </header>
+
+    <div class="menu">
+        <div class="close">
+            <img class="close-button" src="/images/close-button.png">
+        </div>
+        <div class="links">
+            <a href="/lesson1">Lesson 1 - Cellular Automata Basics</a>
+            <a href="/lesson2">Lesson 2 - 2D Cellular Automata</a>
+            <a href="/lesson3">Lesson 3 - Applications</a>
+            <a href="/implementations">Further Exploration & Implementations</a>
+        </div>  
+    </div>
+    <!-- ************************************** -->
+
+    <main>
+        <img class="left arrow" src="images/arrow-button.png">
+        <div class="content">
+            <h1>Lesson 1.1: Cells</h1>
+
+            <p>
+                Before we can create and explore cellular automata like the ones seen in the introduction,
+                we must establish some key concepts that will help to build skills needed to work with more
+                exciting, complex automata.
+            </p>
+
+            <p>
+                The core building blocks of cellular automata are <b>cells</b>. At any given point in time, these cells
+                have a finite (or fixed) number of states that they can take. Most commonly, cellular automata 
+                have states of either <i>on</i> or <i>off</i> (sometimes referred to as <i>alive</i> or <i>dead</i>), though more complex 
+                automata can take more. Let’s take a closer look at one of these cells:
+            </p>
+
+            <div class="container">
+                <div id="boxContainer"></div>
+            </div>
+
+            <p>
+                Try interacting with this cell! Notice that this particular cell has two states: on and off. 
+                Simple, right? Now, let's arrange many cells together, each one holding the same states as this one:
+            </p>
+
+            <div class="container">
+                <div class="container" id="arrayContainer"></div>
+            </div>
+
+            <p>
+                Great! Notice that each of these cells is just a copy of the cell we first introduced above. 
+                But this isn’t a cellular automaton. Why? The cells don’t interact with each other! This is another foundational 
+                aspect of cellular automata: a ruleset. Here is the same set of cells, but this time interacting with each other 
+                using some <b>ruleset</b>:
+            </p>
+
+            <div class="container">
+                <div class="container" id="generatorContainer"></div>
+            </div>
+
+            <p>
+                Note that this version includes a new button, labeled “Generate Next Step.” Clicking this button will allow you to 
+                simulate the automata over <i>time</i>. This is an important feature of cellular automata. We will discuss this in more 
+                detail later. Explore the ruleset of the automata, and observe how it changes cells as you click the next step generation 
+                button. If you would like to set your progress back to the first step, click the <i>reset</i> button.
+            </p>
+
+            <h3>Challenge</h3>
+
+            <p> Describe the ruleset of the above cellular automaton. <a>Hint</a></p>
+
+            <textarea></textarea>
+
+
+
+        </div>
+        <img class="right arrow" src="images/arrow-button.png">
+    </main>
+</body>
+</html>
