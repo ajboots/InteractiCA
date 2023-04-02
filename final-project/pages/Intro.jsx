@@ -18,7 +18,6 @@ function Intro() {
             </header>
 
             <div className={styles.content}>
-              {/* <TableOfContents></TableOfContents> */}
               <p>This is for Christopher</p>
               <h2>What is Cellular Automata?</h2>
               <p>Brief Description.</p>
