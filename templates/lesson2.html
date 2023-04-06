@@ -40,18 +40,22 @@
     <main>
         <img class="left arrow" src="images/arrow-button.png">
         <div class="content">
-            <h1>Lesson 2: Conway's Game of Life</h1>
+            <h1>Conway's Game of Life</h1>
+            
+            <p>&emsp; Throughout this lesson, we will investigate unique patterns in Conway's game of life then, let you play with the simulation, then modify it!</p>
+            <p>&emsp;Learning objectives: </p>
+            <p>&emsp;&emsp; Identify periods in cellular automata patterns</p>
+            <p>&emsp;&emsp; Learn terminology for classes of patterns </p>
+            
 
-            <p>Throughout this lesson, we will investigate unique patterns in Conway's game of life then, let you play with the simulation, then modify it!</p>
+            <h1>Part 2. Patterns</h1>
+            <p>&emsp;Use the "step" button in the interactive panel to step through the simulation</p>
 
-            <p>Learning objectives: Identify a periods pattern and gain understanding of pattern stability</p>
-
-            <p>Use the "step" button in the interactive panel to step through the simulation</p>
 
             <div class="examples">
                 <div>
-                    <h2>Oscillators</h2>
-                    <iframe src="https://codesandbox.io/embed/conways-step-6mojjc"
+                    <h2>&emsp;Oscillators</h2>
+                    <iframe src="https://codesandbox.io/embed/conways-step-6mojjc?hidedevtools=1"
                         style="width:450px;height: 475px; border:0"
                         title="Conway&#039;s Step"
                         allow=""
@@ -70,8 +74,8 @@
                 </div>
 
                 <div>
-                    <h2>Spaceships</h2>
-                    <iframe src="https://codesandbox.io/embed/conways-glider-g3lwrq"
+                    <h2>&emsp;Spaceships</h2>
+                    <iframe src="https://codesandbox.io/embed/conways-glider-g3lwrq?hidedevtools=1"
                         style="width:450px;height: 475px; border:0"
                         title="Conway&#039;s Step"
                         allow=""
@@ -90,12 +94,13 @@
                 </div>
                 
                 <div>
-                    <h2>Glider Guns</h2>
-                    <iframe src="https://codesandbox.io/s/gospergun-ih8wo3"
+                    <h2>&emsp;Glider Guns</h2>
+                    <iframe src="https://codesandbox.io/embed/gospergun-ih8wo3?hidedevtools=1"
                         style="width:450px;height: 475px; border:0"
-                        title="Conway&#039;s Step"
+                        title="Glider Guns"
                         allow=""
                         sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
+                        
                     </iframe>
                     <p>Glider guns are oscillators that make spaceships</p>
                     <p>The first glider gun won a $50 prize ($400 today)</p>
@@ -110,7 +115,36 @@
                 </div>  
             </div>     
         </div>
+        <div class="content">
+            <h1>Part 3. Conway's Game of Life</h1>
+            <p>This interactive simulation is a playground for cellular life!</p>
+            <p>Try clicking and dragging your mouse around on the board to create new life! Control are at the top of the simulation panel.</p>
+            <iframe src="https://codesandbox.io/embed/conways-game-of-life-vxsmmm?hidenavigation=1&editorsize=0&hidenavigation=1&hidedevtools=1"
+                style="width:1280px;height:600px;border:0"
+                title="CGOL"
+                allow=""
+                sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
+            </iframe>
+            <div class="code-changes">
+                <div class="change">
+                    <h3>Maze Generator:</h3>
+                    <p>1: If it's not already, expand the code editor with the slider to the left of the simulation</p>
+                    <p>2: On line 62, change the right side of the equality statement from "neighbors > 3" to "neighbors > 4"</p>
+                    <p>3: Hit the refresh button in the very bottom left of the simulation panel to see your change applied</p>
+                </div>
+
+                <div class="change">
+                    <h3>Cave Generator</h3>
+                    <p>1: Go to line 62, and comment it out with 'ctrl + /'</p>
+                    <p>2: On line 60, change the right side of the equality statement from "neighbors &lt; 2" to "neighbors &lt 4"</p>
+                    <p>3: On line 64, change the right side of the equality statement from "neighbors === 3" to "neighbors > 4"</p>
+                </div>
+            </div>
+
+        </div>
         <img class="right arrow" src="images/arrow-button.png">
+
+        
     </main>
 </body>
 </html>
