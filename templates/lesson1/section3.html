@@ -9,7 +9,9 @@
     <link href="/css/common.css" rel="stylesheet">
     <script src="/js/lesson1/section3.js" type="module" defer></script>
     <script src="/js/common.js" type="module" defer></script>
-    <title>Classes - 1D Autonoma - InteractiCA</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script> <!-- for p5.js library-->
+    <script src="js/sketches/sketch1.3.js"></script>
+    <title>Ruleset Exploration - 1D Autonoma - InteractiCA</title>
 </head>
 <body>
     <!-- *********** COMMON ELEMENTS *********** -->
@@ -25,27 +27,113 @@
 
         <image class="info-button" src="/images/info-button.png"></image>
     </header>
-
-    <div class="menu">
-        <div class="close">
-            <img class="close-button" src="/images/close-button.png">
-        </div>
-        <div class="links">
-            <a href="/lesson1">Lesson 1 - Cellular Automata Basics</a>
-            <a href="/lesson2">Lesson 2 - 2D Cellular Automata</a>
-            <a href="/lesson3">Lesson 3 - Applications</a>
-            <a href="/implementations">Further Exploration & Implementations</a>
-        </div>  
-    </div>
     <!-- ************************************** -->
 
     <main>
         <img class="left arrow" src="images/arrow-button.png">
         <div class="content">
-            <h1>Lesson 1.3: Classes of Cellular Automata</h1>
+            <h1>Lesson 1.3: Ruleset Exploration</h1>
 
-            
+            <p>
+                The ruleset you created in the last section was <i>rule 30</i>, but you can make many other rulesets for
+                cellular automata. But why is this rule <i>#30</i>?
+            </p>
 
+            <p>
+                The naming convention for rule numbers was created by Stephen Wolfram and is known as <b>Wolfram Code</b>. Under
+                this scheme, each rule is defined by a set of configurations with a particular cell’s neighbor, just like
+                you saw at the end of the last section.
+            </p>
+
+            <p>
+                The specific number assigned to a ruleset comes from the binary representation of <i>on and off</i> states. For example,
+                <i>00011110<sub>2</sub></i> is binary for <i>30</i>, which is the ruleset used in the previous section. Toggle each button
+                to explore the generation of rule numbers further below:
+            </p>
+
+            <div class="rules-challenge">
+                <div class="rules-buttons">
+                    <div class="rule">
+                        <button id="rule0" class="rules-button">
+                            <p>◼︎◼︎◼︎</p>
+                            <p>↓</p>
+                            <p id="result0">◻︎</p>
+                        </button>
+                        <p>2<sup>7</sup> = 128</p>
+                    </div>
+                    <div class="rule">
+                        <button id="rule1" class="rules-button">
+                            <p>◼︎◼︎◻︎</p>
+                            <p>↓</p>
+                            <p id="result1">◻︎</p>
+                        </button>
+                        <p>2<sup>6</sup> = 64</p>
+                    </div>
+                    <div class="rule">
+                        <button id="rule2" class="rules-button">
+                            <p>◼︎◻︎◼︎</p>
+                            <p>↓</p>
+                            <p id="result2">◻︎</p>
+                        </button>
+                        <p>2<sup>5</sup> = 32</p>
+                    </div>
+                    <div class="rule">
+                        <button id="rule3" class="rules-button">
+                            <p>◼︎◻︎◻︎</p>
+                            <p>↓</p>
+                            <p id="result3">◻︎</p>
+                        </button>
+                        <p>2<sup>4</sup> = 16</p>
+                    </div>
+                    <div class="rule">
+                       <button id="rule4" class="rules-button">
+                            <p>◻︎◼︎◼︎</p>
+                            <p>↓</p>
+                            <p id="result4">◻︎</p>
+                        </button> 
+                        <p>2<sup>3</sup> = 8</p>
+                    </div>
+                    <div class="rule">
+                       <button id="rule5" class="rules-button">
+                            <p>◻︎◼︎◻</p>
+                            <p>↓</p>
+                            <p id="result5">◻︎</p>
+                        </button> 
+                        <p>2<sup>2</sup> = 4</p>
+                    </div>
+                    <div class="rule">
+                       <button id="rule6" class="rules-button">
+                            <p>◻︎◻︎◼︎</p>
+                            <p>↓</p>
+                            <p id="result6">◻︎</p>
+                        </button> 
+                        <p>2<sup>1</sup> = 2</p>
+                    </div>
+                    <div class="rule">
+                        <button id="rule7" class="rules-button">
+                            <p>◻︎◻︎◻︎</p>
+                            <p>↓</p>
+                            <p id="result7">◻︎</p>
+                        </button>
+                        <p>2<sup>0</sup> = 1</p>
+                    </div>
+                </div>
+                <p id="ruleIndicator" hidden>This is rule <span id="ruleNumber"></span> <i>(Computed by adding: <span id="ruleAddition"></span>)</i>.</p>
+            </div>
+
+            <p>
+                As there are 8 possible configurations of a cell with its immediate neighbors, this means that there are 256 (2<sup>8</sup>) possible rulesets.
+                Let’s look at each of these in more detail.
+            </p>
+
+            <p>
+                The following will allow you to simulate an automaton over several generations using a particular ruleset. To set the ruleset, either change the
+                rule number directly or toggle each individual rule.
+            </p>
+
+            <div class="container">
+                <div id="ruleGenContainer"></div>
+            </div>
 
 
         </div>

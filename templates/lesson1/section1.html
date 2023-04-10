@@ -10,7 +10,7 @@
     <script src="/js/lesson1/section1.js" type="module" defer></script>
     <script src="/js/common.js" type="module" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script> <!-- for p5.js library-->
-    <script src="js/sketches/sketch1.js"></script>
+    <script src="js/sketches/sketch1.1.js"></script>
     <title>Cells - 1D Autonoma - InteractiCA</title>
 </head>
 <body>
@@ -56,7 +56,8 @@
                 The core building blocks of cellular automata are <b>cells</b>. At any given point in time, these cells
                 have a finite (or fixed) number of states that they can take. Most commonly, cellular automata 
                 have states of either <i>on</i> or <i>off</i> (sometimes referred to as <i>alive</i> or <i>dead</i>), though more complex 
-                automata can take more. Let’s take a closer look at one of these cells:
+                automata can take more. Automata including cells with 2 states are called Elementary Cellular Automata (ECA).
+                Let’s take a closer look at one of these cells:
             </p>
 
             <div class="container">
@@ -64,7 +65,7 @@
             </div>
 
             <p>
-                Try interacting with this cell! Notice that this particular cell has two states: on and off. 
+                Try interacting with this cell! Notice that this particular cell has two states: <i>on</i> and <i>off</i>. 
                 Simple, right? Now, let's arrange many cells together, each one holding the same states as this one:
             </p>
 
@@ -79,22 +80,25 @@
                 using some <b>ruleset</b>:
             </p>
 
-            <div class="container">
-                <div class="container" id="generatorContainer"></div>
+            <div class="container" id="generatorContainer"></div>
+            <div id="buttons">
+                <div class="container" id="generateButton"></div>
+                <div class="container" id="resetButton"></div>
             </div>
+            
 
             <p>
-                Note that this version includes a new button, labeled “Generate Next Step.” Clicking this button will allow you to 
+                Note that this version includes a new button, labeled <i>Generate Next Step</i>. Clicking this button will allow you to 
                 simulate the automata over <i>time</i>. This is an important feature of cellular automata. We will discuss this in more 
-                detail later. Explore the ruleset of the automata, and observe how it changes cells as you click the next step generation 
-                button. If you would like to set your progress back to the first step, click the <i>reset</i> button.
+                detail later. Explore the ruleset of the automata, and observe how it changes cells as you click the <i>Generate Next Step</i> 
+                button. You are limited to 10 rows. If you would like to set your progress back to the first step, click the <i>reset</i> (⟳) button.
             </p>
 
             <h3>Challenge</h3>
 
-            <p> Describe the ruleset of the above cellular automaton. <a>Hint</a></p>
+            <p>Describe the ruleset of the above cellular automaton. Think about how each step is being created from the previous one.</p>
 
-            <textarea></textarea>
+            <textarea class="challenge-box"></textarea>
 
 
 

@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link href="/css/index.css" rel="stylesheet">
     <link href="/css/common.css" rel="stylesheet">
-    <script src="/js/index.js" type="module" defer></script>
+    <link href="/css/index.css" rel="stylesheet">
     <script src="/js/common.js" type="module" defer></script>
+    <script src="/js/index.js" type="module" defer></script>
     <title>Home - InteractiCA</title>
 </head>
 <body>
+    <!-- *********** COMMON ELEMENTS *********** -->
     <header>
         <h1><a href="/">InteractiCA</a></h1>
 
@@ -24,34 +25,34 @@
 
         <image class="info-button" src="/images/info-button.png"></image>
     </header>
+    <!-- ************************************** -->
 
-    <div class="menu">
-        <div class="close">
-            <img class="close-button" src="/images/close-button.png">
-        </div>
-        <div class="links">
-            <a href="/lesson1">Lesson 1 - Cellular Automata Basics</a>
-            <a href="/lesson2">Lesson 2 - 2D Cellular Automata</a>
-            <a href="/lesson3">Lesson 3 - Applications</a>
-            <a href="/implementations">Further Exploration & Implementations</a>
-        </div>  
+    <div id="top-image">
+        <h1 class="welcome header">Welcome to InteractiCA!</h1>
+        <p class="welcome description">A series of interactive lessons in cellular automata.</p>
+        <button onclick="window.location='/lesson1'">Get Started!</button>
     </div>
 
     <main>
-        <img class="left arrow" src="images/arrow-button.png">
         <div class="content">
-            <h1>Welcome</h1>
-
-            <h2>What is Cellular Automata?</h2>
-            <p>Brief Description.</p>
+            <h2>What are Cellular Automata?</h2>
+            <p>
+                A cellular automaton is a collection of cells which have state and change over time. These changes are driven
+                by the state of themselves and the cells around them.
+            </p>
             <h2>Why should I learn about Cellular Automata?</h2>
-            <p>Brief Description.</p>
+            <p>
+                The construct of cellular automata have been found in applications of many areas, from physics to biology to the behavior
+                of avalanches and traffic flow. They can also be great way to get hands-on experience in some fundamental concepts of programming
+                and Computer Science. If any of this sounds interesting, or if you just want to learn how the cool patterns you see above are created,
+                Cellular Automata are a great thing to learn.
+            </p>
             <h2>What is this project?</h2>
-            <br>
-            <p>[Also add some cool CA demos to get people interested]</p>
-            
+            <p>
+                This project is an independent study project created by two Computer Science Undergrads. To learn more,
+                click the ( i ) in the top right corner!
+            </p>         
         </div>
-        <img class="right arrow" src="images/arrow-button.png">
     </main>
 </body>
 </html>

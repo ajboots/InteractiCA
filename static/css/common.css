@@ -79,6 +79,13 @@ header {
 .nav-bar a {
   color: white;
   text-decoration: none;
+  padding: 10px;
+}
+
+.nav-bar a:hover {
+  border: 2px solid rgba(224, 224, 224, 0.422);
+  border-radius: 12px;
+  background-color: rgb(26, 132, 218);
 }
 
 /* REMOVED FROM PROJECT */
@@ -191,6 +198,7 @@ main {
   height: 45px;
   position: fixed;
   top: 50%;
+  opacity: 0.8;
 }
 
 .arrow:hover {
@@ -203,6 +211,14 @@ main {
 
 .right {
   right: 10px;
+}
+
+.disabled {
+  opacity: 0.2;
+}
+
+.disabled:hover {
+  cursor: default;
 }
 
 .content {
