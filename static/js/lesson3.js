@@ -3,7 +3,7 @@
 document.querySelector(".right.arrow").addEventListener("click", transitionRight);
 
 function goToNextPage() {
-  window.location.href = '/implementations'
+  window.location.href = '/videos'
 }
 
 function transitionRight() {

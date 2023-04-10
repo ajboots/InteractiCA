@@ -2,3 +2,111 @@
   display: flex;
   justify-content: center;
 }
+
+#generatorContainer {
+  overflow: hidden;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+}
+
+#buttons button {
+  background-color: rgb(24, 124, 206);
+  border: solid black 2px;
+  border-radius: 10px;
+  color: white;
+  height: 35px;
+  margin: 0 5px;
+}
+
+#generateButton button { 
+  width: 150px;
+}
+
+#resetButton button {
+  width: 35px;
+  font-size: 18pt;
+}
+
+#buttons button:hover {
+  cursor: pointer;
+}
+
+.challenge-box {
+  width: 90%;
+  height: 80px;
+}
+
+.rules-challenge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rule p {
+  margin: 0;
+}
+
+.rules-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.rules-button {
+  margin: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  color:rgb(24, 124, 206);
+}
+
+.rules-button:hover {
+  background-color: rgb(237, 247, 255);
+  cursor: pointer;
+}
+
+.rules-button:active {
+  background-color: rgb(190, 226, 255); 
+}
+
+.rules-button p {
+  font-size: 22pt;
+  margin: 0;
+}
+
+#ruleIndicator {
+  margin-bottom: 0;
+}
+
+#check {
+  background-color: rgb(24, 124, 206);
+  color: white; 
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  font-size: 16pt;
+}
+
+#check:hover {
+  cursor: pointer;
+}
+
+#check-feedback {
+  margin: 5px 0px 40px 0px;
+}
+
+.correct {
+  color:green;
+}
+
+.incorrect {
+  color:red;
+}

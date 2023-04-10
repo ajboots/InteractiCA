@@ -1,23 +1,27 @@
 // PAGE TRANSITIONS
 // Right
-document.querySelector(".right.arrow").addEventListener("click", transitionRight);
+// document.querySelector(".right.arrow").addEventListener("click", transitionRight);
 
-function goToNextPage() {
-  window.location.href = '/lesson1'
+// function goToNextPage() {
+//   window.location.href = '/lesson1'
+// }
+
+// function transitionRight() {
+//   document.querySelector(".content").classList.add('animation-right');
+//   setTimeout(goToNextPage, 500);
+// }
+
+let images = ['/images/home-image-1.gif', '/images/home-image-2.gif'];
+
+let index = 0;
+let imgElement = document.getElementById('top-image');
+
+function change() {
+  console.log('changing to: ' + images[index]); 
+  imgElement.style.backgroundImage = "url(" + images[index] + ")";
+  index >= 1 ? index = 0 : index++;
 }
 
-function transitionRight() {
-  document.querySelector(".content").classList.add('animation-right');
-  setTimeout(goToNextPage, 500);
-}
-// Left
-document.querySelector(".left.arrow").addEventListener("click", transitionLeft);
-
-function goToPreviousPage() {
-  window.location.href = '/implementations'
-}
-
-function transitionLeft() {
-  document.querySelector(".content").classList.add('animation-left');
-  setTimeout(goToPreviousPage, 500);
-}
+window.onload = function() {
+    setInterval(change, 5000);
+};

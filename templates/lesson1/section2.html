@@ -9,7 +9,9 @@
     <link href="/css/common.css" rel="stylesheet">
     <script src="/js/lesson1/section2.js" type="module" defer></script>
     <script src="/js/common.js" type="module" defer></script>
-    <title>Interactivity - 1D Autonoma - InteractiCA</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script> <!-- for p5.js library-->
+    <script src="js/sketches/sketch1.2.js"></script>
+    <title>Cell Interactions - 1D Autonoma - InteractiCA</title>
 </head>
 <body>
     <!-- *********** COMMON ELEMENTS *********** -->
@@ -25,27 +27,124 @@
 
         <image class="info-button" src="/images/info-button.png"></image>
     </header>
-
-    <div class="menu">
-        <div class="close">
-            <img class="close-button" src="/images/close-button.png">
-        </div>
-        <div class="links">
-            <a href="/lesson1">Lesson 1 - Cellular Automata Basics</a>
-            <a href="/lesson2">Lesson 2 - 2D Cellular Automata</a>
-            <a href="/lesson3">Lesson 3 - Applications</a>
-            <a href="/implementations">Further Exploration & Implementations</a>
-        </div>  
-    </div>
     <!-- ************************************** -->
 
     <main>
         <img class="left arrow" src="images/arrow-button.png">
         <div class="content">
-            <h1>Lesson 1.2: Cell Interactivity</h1>
+            <h1>Lesson 1.2: Cell Interactions</h1>
+
+            <p>
+                It turns out that the cellular automaton mentioned in the previous section is using
+                a commonly studied ruleset called <i>rule 30</i>. To further explore these rules, let’s go 
+                through some of the foundational parts of interaction between cells.
+            </p>
+            
+            <p>
+                The first important concept is called a <b>generation</b>. You have actually already seen this in the
+                previous section. A generation can be thought of as a <i>time step</i> in a cellular automaton with 
+                a given <i>state</i>. Where have we seen this before? Let’s look back at <i>rule 30</i>, with
+                the first generation with a single <i>on</i> cell in the center:
+            </p>
+
+            <div class="container">
+                <div id="rule30Container"></div>
+            </div>
+
+            <p>
+                In this example, a generation is represented by each individual row. Whenever you clicked on <i>Generate Next Step</i>, 
+                you were actually creating a new generation of the cellular automata! But how can you define the rules of 
+                this automaton?
+            </p>
+
+            <p>
+                Rules for a cellular automaton are created based on groups of cells called <b>neighborhoods</b>. A cell’s neighbors are 
+                those that are surrounding a particular cell, within a certain distance. The ruleset for <i>rule 30</i> defines the 
+                neighborhood for a cell to be cells directly adjacent to the cell to the left and right. Note that we assume the left/right
+                neighbors of the far left/right cells, respectively, are assumed to be an <i>off</i> or <i>dead</i> cell. Select a cell below
+                to see its neighbors:
+            </p>
+
+            <div class="container">
+                <div id="neighborhoodsContainer"></div>
+            </div>
+
+            <p>
+                Neighborhoods can be defined in different ways and the interaction between the state of cells and their
+                neighbors over time form the basis for the rules of a cellular automaton. Knowing this, how can we define the
+                ruleset for <i>rule 30</i>? Let’s take a closer look at the first two generations of the automata above. Focus 
+                on the three <i>living</i> (<i>on</i>) cells in the center of the second generation. The state of these cells is
+                determined by the state of their neighborhood in the previous generation (in this case <i>generation 1</i>). Now,
+                try clicking each cell of generation 2 and see the neighborhood it was generated from:
+            </p>
+
+            <div class="container">
+                <div id="rulesContainer"></div>
+            </div>
+
+            <p>
+                We’re so close! With this knowledge of generations and neighborhoods, let’s more accurately define the rules for
+                this cellular automaton.
+            </p>
+
+            <h3>Challenge</h3>
+
+            <p>
+                Define the ruleset for this cellular automaton. Each generation is built off the previous one in the
+                same way that generation 2 is based on generation 1 (for example, generation 5 is based on generation 4).
+                Select each rule to toggle its output.
+            </p>
+
+            <div class="rules-challenge">
+                <div class="rules-buttons">
+                    <button id="rule0" class="rules-button">
+                        <p>◼︎◼︎◼︎</p>
+                        <p>↓</p>
+                        <p id="result0">◻︎</p>
+                    </button>
+                    <button id="rule1" class="rules-button">
+                        <p>◼︎◼︎◻︎</p>
+                        <p>↓</p>
+                        <p id="result1">◻︎</p>
+                    </button>
+                    <button id="rule2" class="rules-button">
+                        <p>◼︎◻︎◼︎</p>
+                        <p>↓</p>
+                        <p id="result2">◻︎</p>
+                    </button>
+                    <button id="rule3" class="rules-button">
+                        <p>◼︎◻︎◻︎</p>
+                        <p>↓</p>
+                        <p id="result3">◻︎</p>
+                    </button>
+                    <button id="rule4" class="rules-button">
+                        <p>◻︎◼︎◼︎</p>
+                        <p>↓</p>
+                        <p id="result4">◻︎</p>
+                    </button>
+                    <button id="rule5" class="rules-button">
+                        <p>◻︎◼︎◻</p>
+                        <p>↓</p>
+                        <p id="result5">◻︎</p>
+                    </button>
+                    <button id="rule6" class="rules-button">
+                        <p>◻︎◻︎◼︎</p>
+                        <p>↓</p>
+                        <p id="result6">◻︎</p>
+                    </button>
+                    <button id="rule7" class="rules-button">
+                        <p>◻︎◻︎◻︎</p>
+                        <p>↓</p>
+                        <p id="result7">◻︎</p>
+                    </button>
+                </div>
+    
+                <button id="check">Check</button>
+    
+                <p id="check-feedback"></p>
+            </div>
 
             
-
 
 
         </div>
