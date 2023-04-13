@@ -3,7 +3,7 @@
 document.querySelector(".right.arrow").addEventListener("click", transitionRight);
 
 function goToNextPage() {
-  window.location.href = '/lesson1.3'
+  window.location.href = '/1D-Automata/ruleset-exploration'
 }
 
 function transitionRight() {
@@ -15,7 +15,7 @@ function transitionRight() {
 document.querySelector(".left.arrow").addEventListener("click", transitionLeft);
 
 function goToPreviousPage() {
-  window.location.href = '/lesson1.1'
+  window.location.href = '/1D-Automata/cells'
 }
 
 function transitionLeft() {

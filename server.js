@@ -17,19 +17,19 @@ app.get('/', (req, res) => {
     res.sendFile(html_path + 'index.html');
 });
 
-app.get('/lesson1', (req, res) => {
+app.get('/1D-Automata', (req, res) => {
     res.sendFile(html_path + 'lesson1/lesson1.html');
 });
 
-app.get('/lesson1.1', (req, res) => {
+app.get('/1D-Automata/cells', (req, res) => {
     res.sendFile(html_path + 'lesson1/section1.html');
 });
 
-app.get('/lesson1.2', (req, res) => {
+app.get('/1D-Automata/cell-interactions', (req, res) => {
     res.sendFile(html_path + 'lesson1/section2.html');
 });
 
-app.get('/lesson1.3', (req, res) => {
+app.get('/1D-Automata/ruleset-exploration', (req, res) => {
     res.sendFile(html_path + 'lesson1/section3.html');
 });
 
@@ -41,7 +41,7 @@ app.get('/lesson3', (req, res) => {
     res.sendFile(html_path + 'lesson3.html');
 });
 
-app.get('/videos', (req, res) => {
+app.get('/further-discovery', (req, res) => {
     res.sendFile(html_path + 'implementations.html');
 });
 
