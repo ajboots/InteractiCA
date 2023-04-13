@@ -90,6 +90,7 @@ var sketch3 = function ( sketch ) {
     
     canvas.mousePressed(changeBox);
     button = sketch.createButton('Generate Next Step');
+    button.style('font-size', '28px');
     let reset = sketch.createButton('⟳');
     reset.parent('resetButton');
     reset.mousePressed(sketch.reset);

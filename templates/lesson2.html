@@ -146,13 +146,13 @@
                             try
                             to
                             find it yourself</p>
-                        <button
+                        <button class="hint-button";
                             onclick="document.getElementById('mazehint1').style.display = 'block'; this.style.display = 'none';">Reveal
                             Hint</button>
                         <p id="mazehint1" style="display: none;">Only one rule needs to be changed. Use the reset button
                             in the bottom right to reset rules</p>
 
-                        <button
+                        <button class="hint-button";
                             onclick="document.getElementById('mazehint2').style.display = 'block'; this.style.display = 'none';">Reveal
                             Hint</button>
                         <p id="mazehint2" style="display: none;">The last rule needs to be changed by one to make a
@@ -167,13 +167,13 @@
                         <p>Some video games use cellular automata to create cave-like levels. Experiment to find this
                             ruleset.
                         </p>
-                        <button
+                        <button class="hint-button";
                             onclick="document.getElementById('cavehint1').style.display = 'block'; this.style.display = 'none';">Reveal
                             Hint</button>
                         <p id="cavehint1" style="display: none;">This pattern only needs two of the four rules. Place
                             and X
                             in the first and last rules and set both boolean conditions to OR</p>
-                        <button
+                        <button class="hint-button";
                             onclick="document.getElementById('cavehint2').style.display = 'block'; this.style.display = 'none';">Reveal
                             Hint</button>
                         <p id="cavehint2" style="display: none;">The integers in the second and third rule should match.
@@ -188,6 +188,11 @@
 
     </main>
 </body>
+<style>
+    .hint-button {
+        font-size: 22px;
+    }
+</style>
 <style>
     #answerStatus1 {
         font-size: 16px;
