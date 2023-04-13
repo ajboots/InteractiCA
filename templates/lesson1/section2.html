@@ -10,27 +10,42 @@
     <script src="/js/lesson1/section2.js" type="module" defer></script>
     <script src="/js/common.js" type="module" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script> <!-- for p5.js library-->
-    <script src="js/sketches/sketch1.2.js"></script>
+    <script src="/js/sketches/sketch1.2.js"></script>
     <title>Cell Interactions - 1D Autonoma - InteractiCA</title>
 </head>
 <body>
-    <!-- *********** COMMON ELEMENTS *********** -->
-    <header>
-        <h1><a href="/">InteractiCA</a></h1>
+   <!-- *********** COMMON ELEMENTS *********** -->
+   <header>
+    <h1><a class="nav-button" href="/">InteractiCA</a></h1>
 
-        <div class="nav-bar">
-            <h3><a href="/lesson1">1D Automata</a></h3>
-            <h3><a href="/lesson2">2D Automata</a></h3>
-            <h3><a href="/lesson3">CGoL</a></h3>
-            <h3><a href="/videos">Application Videos</a></h3>
+    <div class="nav-bar">
+        <div class="dropdown">
+            <h3><a class="dropdown-top nav-button" href="/1D-Automata">1D Automata <span style="font-size: 12pt">▼</span></a></h3>
+            <div class="dropdown-content">
+                <a href="/1D-Automata/cells">Cells</a>
+                <a href="/1D-Automata/cell-interactions">Cell Interactions</a>
+                <a href="/1D-Automata/ruleset-exploration">Ruleset Exploration</a>
+            </div>
         </div>
+        
+        <div class="dropdown">
+            <h3><a class="dropdown-top nav-button" href="/lesson2">2D Automata <span style="font-size: 12pt">▼</span></a></h3>
+            <div class="dropdown-content">
+                <a href="/lesson2">Cells & Patterns</a>
+                <a href="/lesson2">Conway's Game of Life</a>
+                <a href="/lesson2">Ruleset Exploration</a>
+            </div>
+        </div>
+        
+        <h3><a class="nav-button" href="/further-discovery">Further Discovery</a></h3>
+    </div>
 
-        <image class="info-button" src="/images/info-button.png"></image>
-    </header>
-    <!-- ************************************** -->
+    <image class="info-button" src="/images/info-button.png"></image>
+</header>
+<!-- ************************************** -->
 
     <main>
-        <img class="left arrow" src="images/arrow-button.png">
+        <img class="left arrow" src="/images/arrow-button.png">
         <div class="content">
             <h1>Lesson 1.2: Cell Interactions</h1>
 
@@ -148,7 +163,7 @@
 
 
         </div>
-        <img class="right arrow" src="images/arrow-button.png">
+        <img class="right arrow" src="/images/arrow-button.png">
     </main>
 </body>
 </html>

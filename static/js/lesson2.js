@@ -15,7 +15,7 @@ function transitionRight() {
 document.querySelector(".left.arrow").addEventListener("click", transitionLeft);
 
 function goToPreviousPage() {
-  window.location.href = '/lesson1.3'
+  window.location.href = '/1D-Automata/ruleset-exploration'
 }
 
 function transitionLeft() {

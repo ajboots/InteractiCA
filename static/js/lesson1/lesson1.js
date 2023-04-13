@@ -3,7 +3,7 @@
 document.querySelector(".right.arrow").addEventListener("click", transitionRight);
 
 function goToNextPage() {
-  window.location.href = '/lesson1.1'
+  window.location.href = '/1D-Automata/cells'
 }
 
 function transitionRight() {

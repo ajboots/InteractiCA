@@ -6,7 +6,7 @@
   font-size: 50pt;
   margin-bottom: 0px;
   color: white;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
   width: 800px;
   border-radius: 10px;
 }
@@ -14,13 +14,13 @@
 .welcome.description {
   margin-top: 0px;
   color: white;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
   width: 450px;
   border-radius: 10px;
 }
 
 #top-image {
-  background-image: url("/images/home-image-2.gif");
+  background-image: url("/images/home-images/ca-30.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
