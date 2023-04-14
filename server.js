@@ -33,10 +33,15 @@ app.get('/1D-Automata/ruleset-exploration', (req, res) => {
     res.sendFile(html_path + 'lesson1/section3.html');
 });
 
-app.get('/lesson2', (req, res) => {
-    res.sendFile(html_path + 'lesson2.html');
+app.get('/lesson2.2', (req, res) => {
+    res.sendFile(html_path + 'lesson2.2.html');
 });
-
+app.get('/lesson2.1', (req, res) => {
+    res.sendFile(html_path + 'lesson2.1.html');
+});
+app.get('/lesson2.3', (req, res) => {
+    res.sendFile(html_path + 'lesson2.3.html');
+});
 app.get('/lesson3', (req, res) => {
     res.sendFile(html_path + 'lesson3.html');
 });

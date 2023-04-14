@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="/css/lesson2.3.css" rel="stylesheet">
+    <link href="/css/common.css" rel="stylesheet">
+    <script src="/js/lesson2.3.js" type="module" defer></script>
+    <script src="/js/common.js" type="module" defer></script>
+    <title>2D Autonoma- InteractiCA</title>
+</head>
+
+<body>
+    <!-- *********** COMMON ELEMENTS *********** -->
+    <header>
+        <h1><a class="nav-button" href="/">InteractiCA</a></h1>
+
+        <div class="nav-bar">
+            <div class="dropdown">
+                <h3><a class="dropdown-top nav-button" href="/1D-Automata">1D Automata <span style="font-size: 12pt">▼</span></a></h3>
+                <div class="dropdown-content">
+                    <a href="/1D-Automata/cells">Cells</a>
+                    <a href="/1D-Automata/cell-interactions">Cell Interactions</a>
+                    <a href="/1D-Automata/ruleset-exploration">Ruleset Exploration</a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <h3><a class="dropdown-top nav-button" href="/lesson2.1">2D Automata <span style="font-size: 12pt">▼</span></a></h3>
+                <div class="dropdown-content">
+                    <a href="/lesson2.1">Cells & Patterns</a>
+                    <a href="/lesson2.2">Conway's Game of Life</a>
+                    <a href="/lesson2.3">Ruleset Exploration</a>
+                </div>
+            </div>
+            
+            <h3><a class="nav-button" href="/further-discovery">Further Discovery</a></h3>
+        </div>
+
+        <image class="info-button" src="/images/info-button.png"></image>
+    </header>
+    <!-- ************************************** -->
+    
+    <main>
+        <img class="left arrow" src="images/arrow-button.png">
+        <div class="content">
+            <div style="background-color: #e4e4e4; ">
+                <h1>Conway's Game of Life</h1>
+
+                <p>&emsp;Throughout this lesson, we will investigate unique patterns in Conway's game of life then, let
+                    you
+                    play with the simulation, then modify it!</p>
+                <p>&emsp;Learning objectives: </p>
+
+                <div style=" font-weight: bold;">
+
+                    <p>&emsp;&emsp; ● Identify the period of a pattern</p>
+                    <p>&emsp;&emsp; ● Learn terminology for classes of patterns </p>
+                    <p>&emsp;&emsp; ● Create different cellular automata rulesets</p>
+                    <p>&emsp;&emsp; ● Gain understanding of why Conway's game of life is unique</p>
+                    <p>&emsp; </p>
+                </div>
+
+            </div>
+            <h1>Part 2. Patterns</h1>
+            <p>&emsp;Use the "step" button in the interactive panel to step through the simulation</p>
+
+
+            <div class="examples">
+                <div style="width: 50%; background-color: #d8d8d8; padding-left: 10px;">
+                    <h2>&emsp;Oscillators</h2>
+                    <iframe src="https://codesandbox.io/embed/conways-step-6mojjc?hidedevtools=1"
+                        style="width:450px;height: 475px; border:0" title="Conway&#039;s Step" allow=""
+                        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
+                    </iframe>
+                    <p>Repeating patterns are known as oscillators</p>
+                    <p>The steps to repeat is an oscillator's period</p>
+                    <p>What is the period of the Pulsar pattern?</p>
+                    <div>
+                        <button class="multiplechoice" onclick="checkAnswer(1, 3, 1)">1 Step</button>
+                        <button class="multiplechoice" onclick="checkAnswer(2, 3, 1)">2 Steps</button>
+                        <button class="multiplechoice" onclick="checkAnswer(3, 3, 1)">3 Steps</button>
+                        <button class="multiplechoice" onclick="checkAnswer(4, 3, 1)">4 Steps</button>
+                        <p id="answerStatus1" size></p>
+                    </div>
+                </div>
+                <div style="width: 10%; background-color: #ffffff;"></div>
+                <div style="width: 50%; background-color: #d8d8d8; padding-left: 10px;">
+                    <h2>&emsp;Spaceships</h2>
+                    <iframe src="https://codesandbox.io/embed/conways-glider-g3lwrq?hidedevtools=1"
+                        style="width:450px;height: 475px; border:0" title="Conway&#039;s Step" allow=""
+                        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
+                    </iframe>
+                    <p>Moving repeating patterns are known as spaceships</p>
+                    <p>Spaceships come in many shapes and sizes</p>
+                    <p>What is the period of this spaceship?</p>
+                    <div>
+                        <button class="multiplechoice" onclick="checkAnswer(1, 4, 2)">1 Step</button>
+                        <button class="multiplechoice" onclick="checkAnswer(2, 4, 2)">2 Steps</button>
+                        <button class="multiplechoice" onclick="checkAnswer(3, 4, 2)">3 Steps</button>
+                        <button class="multiplechoice" onclick="checkAnswer(4, 4, 2)">4 Steps</button>
+                        <p id="answerStatus2" size></p>
+                    </div>
+                </div>
+                <div style="width: 10%; background-color: #ffffff;"></div>
+                <div style="width: 50%; background-color: #d8d8d8; padding-left: 10px;">
+                    <h2>&emsp;Glider Guns</h2>
+                    <iframe src="https://codesandbox.io/embed/gospergun-ih8wo3?hidedevtools=1"
+                        style="width:450px;height: 475px; border:0" title="Glider Guns" allow=""
+                        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
+
+                    </iframe>
+                    <p>Glider guns are oscillators that make spaceships</p>
+                    <p>The first glider gun won a $50 prize ($400 today)</p>
+                    <p>What is the period of the gliders this gun makes?</p>
+                    <div>
+                        <button class="multiplechoice" onclick="checkAnswer(1, 4, 3)">1 step</button>
+                        <button class="multiplechoice" onclick="checkAnswer(2, 4, 3)">2 steps</button>
+                        <button class="multiplechoice" onclick="checkAnswer(3, 4, 3)">3 steps</button>
+                        <button class="multiplechoice" onclick="checkAnswer(4, 4, 3)">4 steps</button>
+                        <p id="answerStatus3" size></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" style=" background-color: #d8d8d8;">
+            <h1>Part 3. Conway's Game of Life</h1>
+            <p>This interactive simulation is a playground for cellular life!</p>
+            <p>Try clicking and dragging your mouse around on the board to create new life! Controls for the simulation
+                are at the top of the panel, and rules at the bottom. </p>
+            <iframe
+                src="https://codesandbox.io/embed/conways-game-of-life-vxsmmm?hidenavigation=1&editorsize=0&hidenavigation=1&hidedevtools=1"
+                style="width:1280px;height:600px;border:0" title="CGOL" allow=""
+                sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
+            </iframe>
+            <div style="width: 100%; background-color: #f5f5f5; padding: 10px;">
+                <h3>Conway's Game</h3>
+                <p>The default ruleset (Conway's game) reads: when a cell's neighbour count is less than 4 and greater
+                    than 2 (exactly
+                    three) make it alive. If less than 2 or greater than 3, cell dies</p>
+            </div>
+            <div style="display: flex;">
+                <div style="width: 50%; background-color: #e6e6e6; padding: 10px;">
+                    <div style="display: flex; flex-direction: column;">
+                        <h3>Maze Generator</h3>
+                        <p>With some modifications to the rules, these cells can create a maze-like pattern. Experiment
+                            and
+                            try
+                            to
+                            find it yourself</p>
+                        <button class="hint-button";
+                            onclick="document.getElementById('mazehint1').style.display = 'block'; this.style.display = 'none';">Reveal
+                            Hint</button>
+                        <p id="mazehint1" style="display: none;">Only one rule needs to be changed. Use the reset button
+                            in the bottom right to reset rules</p>
+
+                        <button class="hint-button";
+                            onclick="document.getElementById('mazehint2').style.display = 'block'; this.style.display = 'none';">Reveal
+                            Hint</button>
+                        <p id="mazehint2" style="display: none;">The last rule needs to be changed by one to make a
+                            maze.
+                        </p>
+
+                    </div>
+                </div>
+                <div style="width: 50%; background-color: #d4d4d4; padding: 10px;">
+                    <div style="display: flex; flex-direction: column;">
+                        <h3>Cave Generator</h3>
+                        <p>Some video games use cellular automata to create cave-like levels. Experiment to find this
+                            ruleset.
+                        </p>
+                        <button class="hint-button";
+                            onclick="document.getElementById('cavehint1').style.display = 'block'; this.style.display = 'none';">Reveal
+                            Hint</button>
+                        <p id="cavehint1" style="display: none;">This pattern only needs two of the four rules. Place
+                            and X
+                            in the first and last rules and set both boolean conditions to OR</p>
+                        <button class="hint-button";
+                            onclick="document.getElementById('cavehint2').style.display = 'block'; this.style.display = 'none';">Reveal
+                            Hint</button>
+                        <p id="cavehint2" style="display: none;">The integers in the second and third rule should match.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <img class="right arrow" src="images/arrow-button.png">
+
+
+    </main>
+</body>
+<style>
+    .hint-button {
+        font-size: 22px;
+    }
+</style>
+<style>
+    #answerStatus1 {
+        font-size: 16px;
+    }
+</style>
+<style>
+    #answerStatus2 {
+        font-size: 16px;
+    }
+</style>
+<style>
+    #answerStatus3 {
+        font-size: 16px;
+    }
+</style>
+<style>
+    .multiplechoice {
+        font-size: 22px;
+    }
+</style>
+
+<script>
+    function checkAnswer(clickedButton, correctAnswer, questionID) {
+        if (clickedButton === correctAnswer) {
+            document.getElementById("answerStatus" + questionID).textContent = "Correct! The pattern takes " + correctAnswer + " steps to repeat";
+        } else {
+            document.getElementById("answerStatus" + questionID).textContent = "Incorrect. How many clicks does it take for the pattern to repeat?";
+        }
+    }
+</script>
+
+</html>
