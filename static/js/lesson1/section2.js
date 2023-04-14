@@ -61,3 +61,51 @@ document.getElementById("check").addEventListener("click", () => {
     feedback.classList.add("incorrect")
   }
 });
+
+// RULE GENERATION
+let rulegen = [false, false, false, false, false, false, false, false];
+let values = [128, 64, 32, 16, 8, 4, 2, 1];
+
+document.querySelectorAll(".rulegen-button").forEach(button => {
+  button.addEventListener("click", () => {
+    let rule = button.id.charAt(4);
+    if (rulegen[rule]) {
+      rulegen[rule] = false;
+      ruleOffGen(rule);
+    } else {
+      rulegen[rule] = true;
+      ruleOnGen(rule);
+    } 
+  });
+});
+
+function ruleOnGen(ruleNumber) {
+  document.getElementById("resultgen" + ruleNumber).innerHTML = "◼︎";
+  updateText();
+}
+
+function ruleOffGen(ruleNumber) {
+  document.getElementById("resultgen" + ruleNumber).innerHTML = "◻";
+  updateText();
+}
+
+function updateText() {
+  updateAddition();
+  let rulesBinary = rulegen.join().replaceAll("true", "1").replaceAll("false", "0").replaceAll(",", "");
+  document.getElementById('ruleIndicator').removeAttribute('hidden');
+  document.getElementById('ruleNumber').innerHTML = parseInt(rulesBinary, 2);
+}
+
+function updateAddition() {
+  let addition = "";
+  for (let i = 0; i < rulegen.length; i++) {
+    if (rulegen[i])
+      addition = addition + values[i] + " + "; 
+  }
+  if (addition.length != 0) {
+    addition = addition.slice(0, -3);
+  } else {
+    addition = "0";
+  }
+  document.getElementById('ruleAddition').innerHTML = addition;
+}

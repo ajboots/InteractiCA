@@ -47,29 +47,25 @@
     <main>
         <img class="left arrow" src="/images/arrow-button.png">
         <div class="content">
-            <h1>Lesson 1.1: Cells</h1>
+            <h1>Lesson 1.1 - Cells: Interactions in 1D Grids</h1>
 
             <p>
-                Before we can create and explore cellular automata like the ones seen in the introduction,
-                we must establish some key concepts that will help to build skills needed to work with more
-                exciting, complex automata.
+                To better understand how more complex automata like those on the <a href="/">home page</a> of this site work,
+                let's first cover some basic concepts.
             </p>
 
             <p>
-                The core building blocks of cellular automata are <b>cells</b>. At any given point in time, these cells
-                have a finite (or fixed) number of states that they can take. Most commonly, cellular automata 
-                have states of either <i>on</i> or <i>off</i> (sometimes referred to as <i>alive</i> or <i>dead</i>), though more complex 
-                automata can take more. Automata including cells with 2 states are called Elementary Cellular Automata (ECA).
-                Let’s take a closer look at one of these cells:
+                The core building blocks of cellular automata are <b>cells</b>. Cells have a <i>finite</i> (fixed) number of states. Try interacting with the cell below! Notice that it has just two
+                <b>states</b>: <i>on</i> and <i>off</i> (sometimes referred to as <i>alive</i> and <i>dead</i>, <i>1</i> and <i>0</i>, or <i>true</i> and <i>false</i>). This is common, though more
+                complex automata can have more states. Observe that a cell can only take a <i>single</i> state at any given time.
             </p>
 
             <div class="container">
                 <div id="boxContainer"></div>
             </div>
 
-            <p>
-                Try interacting with this cell! Notice that this particular cell has two states: <i>on</i> and <i>off</i>. 
-                Simple, right? Now, let's arrange many cells together, each one holding the same states as this one:
+            <p>   
+                Now, let's arrange a row of these same cells together. In cellular automata, this is a <b>1-Dimensional Grid</b> of cells.
             </p>
 
             <div class="container">
@@ -77,31 +73,41 @@
             </div>
 
             <p>
-                Great! Notice that each of these cells is just a copy of the cell we first introduced above. 
-                But this isn’t a cellular automaton. Why? The cells don’t interact with each other! This is another foundational 
-                aspect of cellular automata: a ruleset. Here is the same set of cells, but this time interacting with each other 
-                using some <b>ruleset</b>:
+                This is great - but isn’t a cellular automaton. Why? The cells don’t interact with each other! These interactions are a crucial
+                part of what makes a cellular automata work. Let's add this to the simulation below, which is now a simple cellular automata!
+            </p>
+
+            <p>
+                <i>Using the simulation: Turn some cells on to set the initial state, then click <b>Generate Next Step</b> to step through
+                    discrete <b>timesteps</b>. You are limited to 10 timesteps. Use the <b>⟳</b> button to reset the simulation to its original state. </i>
+            </p>
+
+            <div class="container" id="generatorContainer0"></div>
+            <div id="buttons0">
+                <div class="container" id="generateButton0"></div>
+                <div class="container" id="resetButton0"></div>
+            </div>
+
+            <p>
+                To better see the interactions over time, cellular automata are often displayed with <i>each timestep on a separate row</i>. Each timestep
+                (or row) is often described as a <b>generation</b>. Note that the simulation below also includes a generation number that starts at 0 for the
+                initial state <i>(this is sometimes called zero-indexing)</i>.
             </p>
 
             <div class="container" id="generatorContainer"></div>
+            <div class="container" id="generationLabel"></div>
             <div id="buttons">
                 <div class="container" id="generateButton"></div>
-                <div class="container" id="resetButton"></div>
+                <div class="container" id="resetButton"></div>   
             </div>
-            
 
-            <p>
-                Note that this version includes a new button, labeled <i>Generate Next Step</i>. Clicking this button will allow you to 
-                simulate the automata over <i>time</i>. This is an important feature of cellular automata. We will discuss this in more 
-                detail later. Explore the ruleset of the automata, and observe how it changes cells as you click the <i>Generate Next Step</i> 
-                button. You are limited to 10 rows. If you would like to set your progress back to the first step, click the <i>reset</i> (⟳) button.
-            </p>
+            <h3>Check Your Understanding</h3>
 
-            <h3>Challenge</h3>
+            <p>How many states do cells have? How many can they have at a time?</p>
 
-            <p>Describe the ruleset of the above cellular automaton. Think about how each step is being created from the previous one.</p>
+            <p>What is a generation?</p>
 
-            <textarea class="challenge-box"></textarea>
+            <p>How were the cells in the final simulations interacting?</p>
 
 
 

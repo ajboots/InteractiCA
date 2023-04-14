@@ -7,7 +7,7 @@
   overflow: hidden;
 }
 
-#buttons {
+#buttons, #buttons0 {
   display: flex;
   justify-content: center;
 }
@@ -22,16 +22,60 @@
 }
 
 #generateButton button { 
-  width: 150px;
+  width: 250px;
+  height: 45px;
+  font-size: 18pt;
 }
 
 #resetButton button {
-  width: 35px;
+  width: 45px;
+  height: 45px;
+  font-size: 26pt;
+  padding: 0 0 5px 5px;
+}
+
+#buttons0 button {
+  background-color: rgb(24, 124, 206);
+  border: solid black 2px;
+  border-radius: 10px;
+  color: white;
+  margin: 0 5px;
+}
+
+#generateButton0 button { 
+  width: 250px;
+  height: 45px;
   font-size: 18pt;
+}
+
+#resetButton0 button {
+  width: 45px;
+  height: 45px;
+  font-size: 26pt;
+  padding: 0 0 5px 5px;
 }
 
 #buttons button:hover {
   cursor: pointer;
+}
+
+#buttons0 button:hover {
+  cursor: pointer;
+}
+
+#generationLabel button {
+  height: 45px;
+  width: 300px;
+  font-size: 18pt;
+  margin-bottom: 7px;
+  background-color: rgb(4, 94, 168);
+  border: solid black 2px;
+  border-radius: 10px;
+  color: white;
+}
+
+#generationLabel button:hover {
+  cursor: default;
 }
 
 .challenge-box {
@@ -60,7 +104,7 @@
   justify-content: center;
 }
 
-.rules-button {
+.rules-button, .rulegen-button, .rule51-button {
   margin: 10px;
   margin-bottom: 0px;
   border-radius: 10px;
@@ -68,16 +112,17 @@
   color:rgb(24, 124, 206);
 }
 
-.rules-button:hover {
+.rules-button:hover, .rulegen-button:hover {
   background-color: rgb(237, 247, 255);
   cursor: pointer;
 }
 
-.rules-button:active {
+.rules-button:active, .rulegen-button:active {
   background-color: rgb(190, 226, 255); 
 }
 
-.rules-button p {
+.rules-button p, .rulegen-button p, .rule51-button p 
+{
   font-size: 22pt;
   margin: 0;
 }

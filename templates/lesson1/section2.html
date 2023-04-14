@@ -47,37 +47,22 @@
     <main>
         <img class="left arrow" src="/images/arrow-button.png">
         <div class="content">
-            <h1>Lesson 1.2: Cell Interactions</h1>
+            <h1>Lesson 1.2: Elementary Cellular Automata</h1>
 
             <p>
-                It turns out that the cellular automaton mentioned in the previous section is using
-                a commonly studied ruleset called <i>rule 30</i>. To further explore these rules, let’s go 
-                through some of the foundational parts of interaction between cells.
-            </p>
-            
-            <p>
-                The first important concept is called a <b>generation</b>. You have actually already seen this in the
-                previous section. A generation can be thought of as a <i>time step</i> in a cellular automaton with 
-                a given <i>state</i>. Where have we seen this before? Let’s look back at <i>rule 30</i>, with
-                the first generation with a single <i>on</i> cell in the center:
-            </p>
-
-            <div class="container">
-                <div id="rule30Container"></div>
-            </div>
-
-            <p>
-                In this example, a generation is represented by each individual row. Whenever you clicked on <i>Generate Next Step</i>, 
-                you were actually creating a new generation of the cellular automata! But how can you define the rules of 
-                this automaton?
+                Let's revisit our definition of cellular automata. In the previous lesson, you found that CA are composed
+                of <i>cells that interact over time steps called generations</i>. For the purposes of this lesson, we will
+                focus on <b>Elementary Cellular Automata</b> (ECA): automata comprised of cells with <i>two states</i> and <i>rulesets depending on the state
+                of their nearest neighbors</i>. But what do we mean by <b>neighbors</b> and <b>rulesets</b>?
             </p>
 
             <p>
-                Rules for a cellular automaton are created based on groups of cells called <b>neighborhoods</b>. A cell’s neighbors are 
-                those that are surrounding a particular cell, within a certain distance. The ruleset for <i>rule 30</i> defines the 
-                neighborhood for a cell to be cells directly adjacent to the cell to the left and right. Note that we assume the left/right
-                neighbors of the far left/right cells, respectively, are assumed to be an <i>off</i> or <i>dead</i> cell. Select a cell below
-                to see its neighbors:
+                In general, a CA <b>neighborhood</b> is a group of cells surrounding a particular cell, within some distance. Remember that an ECA's rules are based on its <i>nearest neighbors</i>. Note that the left/right
+                neighbors of the far left/right cells are assumed to be <i>off</i> cells. Select a cell below to see its neighbors:
+            </p>
+
+            <p style="text-align:center">
+                <i>Select a cell to see its neighbors.</i>
             </p>
 
             <div class="container">
@@ -85,12 +70,14 @@
             </div>
 
             <p>
-                Neighborhoods can be defined in different ways and the interaction between the state of cells and their
-                neighbors over time form the basis for the rules of a cellular automaton. Knowing this, how can we define the
-                ruleset for <i>rule 30</i>? Let’s take a closer look at the first two generations of the automata above. Focus 
-                on the three <i>living</i> (<i>on</i>) cells in the center of the second generation. The state of these cells is
-                determined by the state of their neighborhood in the previous generation (in this case <i>generation 1</i>). Now,
-                try clicking each cell of generation 2 and see the neighborhood it was generated from:
+                A CA's <b>ruleset</b> defines the way that its cells interact. Remember the "flipping" automata from last lesson?
+                <i>The flipping nature describes that automata's ruleset.</i> We have provided the first two generations of that automata
+                below (given a predetermined initial state). <i>Notice that this automata only depends on the previous state of itself and
+                not its neighbors.</i>
+            </p>
+
+            <p style="text-align:center">
+                <i>Select a cell from generation 1 to see which cells from generation 0 it was generated from.</i>
             </p>
 
             <div class="container">
@@ -98,9 +85,161 @@
             </div>
 
             <p>
-                We’re so close! With this knowledge of generations and neighborhoods, let’s more accurately define the rules for
-                this cellular automaton.
+                Cellular automata rulesets are often described by giving a <i>set of configurations of states between generations</i>. For our
+                "flipping" automata, this would mean the below configurations are true. For example, the first configuration shows that if a cell
+                and both its neighbors are <i>on</i> during some generation, the resulting cell in the next generation will be <i>off</i>. Try
+                to match each output of the previous simulation to one of these (feel free to use its neighbor selection tool).
             </p>
+
+            <p style="text-align:center">
+                <i>Ruleset for the "flipping" automata.</i>
+            </p>
+
+            <div class="rules-challenge">
+                <div class="rules-buttons">
+                    <div class="rule">
+                        <button id="rule0" class="rule51-button">
+                            <p>◼︎◼︎◼︎</p>
+                            <p>↓</p>
+                            <p>◻︎</p>
+                        </button>
+                    </div>
+                    <div class="rule">
+                        <button id="rule1" class="rule51-button">
+                            <p>◼︎◼︎◻︎</p>
+                            <p>↓</p>
+                            <p>◻︎</p>
+                        </button>
+                    </div>
+                    <div class="rule">
+                        <button id="rule2" class="rule51-button">
+                            <p>◼︎◻︎◼︎</p>
+                            <p>↓</p>
+                            <p>◼︎</p>
+                        </button>
+                    </div>
+                    <div class="rule">
+                        <button id="rule3" class="rule51-button">
+                            <p>◼︎◻︎◻︎</p>
+                            <p>↓</p>
+                            <p>◼︎</p>
+                        </button>
+                    </div>
+                    <div class="rule">
+                       <button id="rule4" class="rule51-button">
+                            <p>◻︎◼︎◼︎</p>
+                            <p>↓</p>
+                            <p>◻︎</p>
+                        </button> 
+                    </div>
+                    <div class="rule">
+                       <button id="rule5" class="rule51-button">
+                            <p>◻︎◼︎◻</p>
+                            <p>↓</p>
+                            <p>◻︎</p>
+                        </button> 
+                    </div>
+                    <div class="rule">
+                       <button id="rule6" class="rule51-button">
+                            <p>◻︎◻︎◼︎</p>
+                            <p>↓</p>
+                            <p>◼︎</p>
+                        </button> 
+                    </div>
+                    <div class="rule">
+                        <button id="rule7" class="rule51-button">
+                            <p>◻︎◻︎◻︎</p>
+                            <p>↓</p>
+                            <p>◼︎</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                Often, cellular automata are classified by a <b>rule number</b> that describes what their particular ruleset does. Our "flipping" automata is actually called <i>rule 51</i>. Why 51?
+                The naming convention for rule numbers was created by Stephen Wolfram and is known as <b>Wolfram Code</b>.
+            </p>
+
+            <p>
+                The specific number assigned to a ruleset comes from the binary representation of <i>on and off</i> states. For example,
+                <i>00110011<sub>2</sub></i> is binary for <i>51</i>, the ruleset from the last lesson. Since there are 8 possible configurations of a cell with its immediate neighbors, this means
+                that there are 256 (2<sup>8</sup>) possible rulesets.
+            </p>
+
+            <p style="text-align:center">
+                <i>Click each button to toggle the state of the output cell and see the cooresponding rule number.</i>
+            </p>
+
+            <div class="rules-challenge">
+                <div class="rules-buttons">
+                    <div class="rule">
+                        <button id="rule0" class="rulegen-button">
+                            <p>◼︎◼︎◼︎</p>
+                            <p>↓</p>
+                            <p id="resultgen0">◻︎</p>
+                        </button>
+                        <p>2<sup>7</sup> = 128</p>
+                    </div>
+                    <div class="rule">
+                        <button id="rule1" class="rulegen-button">
+                            <p>◼︎◼︎◻︎</p>
+                            <p>↓</p>
+                            <p id="resultgen1">◻︎</p>
+                        </button>
+                        <p>2<sup>6</sup> = 64</p>
+                    </div>
+                    <div class="rule">
+                        <button id="rule2" class="rulegen-button">
+                            <p>◼︎◻︎◼︎</p>
+                            <p>↓</p>
+                            <p id="resultgen2">◻︎</p>
+                        </button>
+                        <p>2<sup>5</sup> = 32</p>
+                    </div>
+                    <div class="rule">
+                        <button id="rule3" class="rulegen-button">
+                            <p>◼︎◻︎◻︎</p>
+                            <p>↓</p>
+                            <p id="resultgen3">◻︎</p>
+                        </button>
+                        <p>2<sup>4</sup> = 16</p>
+                    </div>
+                    <div class="rule">
+                       <button id="rule4" class="rulegen-button">
+                            <p>◻︎◼︎◼︎</p>
+                            <p>↓</p>
+                            <p id="resultgen4">◻︎</p>
+                        </button> 
+                        <p>2<sup>3</sup> = 8</p>
+                    </div>
+                    <div class="rule">
+                       <button id="rule5" class="rulegen-button">
+                            <p>◻︎◼︎◻</p>
+                            <p>↓</p>
+                            <p id="resultgen5">◻︎</p>
+                        </button> 
+                        <p>2<sup>2</sup> = 4</p>
+                    </div>
+                    <div class="rule">
+                       <button id="rule6" class="rulegen-button">
+                            <p>◻︎◻︎◼︎</p>
+                            <p>↓</p>
+                            <p id="resultgen6">◻︎</p>
+                        </button> 
+                        <p>2<sup>1</sup> = 2</p>
+                    </div>
+                    <div class="rule">
+                        <button id="rule7" class="rulegen-button">
+                            <p>◻︎◻︎◻︎</p>
+                            <p>↓</p>
+                            <p id="resultgen7">◻︎</p>
+                        </button>
+                        <p>2<sup>0</sup> = 1</p>
+                    </div>
+                </div>
+                <p id="ruleIndicator" hidden>This is rule <span id="ruleNumber"></span> <i>(Computed by adding: <span id="ruleAddition"></span>)</i>.</p>
+            </div>
 
             <h3>Challenge</h3>
 
