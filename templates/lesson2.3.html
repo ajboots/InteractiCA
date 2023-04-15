@@ -31,7 +31,7 @@
             <div class="dropdown">
                 <h3><a class="dropdown-top nav-button" href="/lesson2.1">2D Automata <span style="font-size: 12pt">▼</span></a></h3>
                 <div class="dropdown-content">
-                    <a href="/lesson2.1">Cells & Patterns</a>
+                    <a href="/lesson2.1">Conway's Rules</a>
                     <a href="/lesson2.2">Conway's Game of Life</a>
                     <a href="/lesson2.3">Ruleset Exploration</a>
                 </div>
@@ -47,18 +47,14 @@
     <main>
         <img class="left arrow" src="images/arrow-button.png">
         <div class="content">
-            <div style="background-color: #e4e4e4; ">
-                <h1>Conway's Game of Life</h1>
+            <div >
+                <h1>Life by your own rules</h1>
 
-                <p>&emsp;Throughout this lesson, we will investigate unique patterns in Conway's game of life then, let
-                    you
-                    play with the simulation, then modify it!</p>
+                <p>&emsp;In this lesson, there are guides to help expirment with rulesets to create interesting CA</p>
                 <p>&emsp;Learning objectives: </p>
 
                 <div style=" font-weight: bold;">
-
-                    <p>&emsp;&emsp; ● Identify the period of a pattern</p>
-                    <p>&emsp;&emsp; ● Learn terminology for classes of patterns </p>
+                    <p>&emsp;&emsp; ● Devlop intuition for how rules affect pattern stability </p>
                     <p>&emsp;&emsp; ● Create different cellular automata rulesets</p>
                     <p>&emsp;&emsp; ● Gain understanding of why Conway's game of life is unique</p>
                     <p>&emsp; </p>
@@ -68,11 +64,7 @@
 
         </div>
         <div class="content" >
-            <h1>Part 3. Conway's Game of Life</h1>
-            <div style="width: 100%; padding: 10px;">
-                <h3>Conway's Game</h3>
-                <p>The default ruleset (Conway's game) reads: when a cell is dead and its neighbour count is 3, make it alive. If it is alive and neighbours are less than 2 or greater than 3, cell dies</p>
-            </div>
+
             <div style="display: flex;">
                 <div style="width: 50%;">
                     <div style="display: flex; flex-direction: column; padding-right: 10px">
@@ -111,12 +103,12 @@
                         <button class="hint-button";
                             onclick="document.getElementById('cavehint2').style.display = 'block'; this.style.display = 'none';">Reveal
                             Hint</button>
-                        <p id="cavehint2" style="display: none;">The only active rule for cell birth should be 'naibours > 4' and the cell death rule should be 'naibours < X'. X is the same for both. Use the 'Random State' button if the board is blank.
+                        <p id="cavehint2" style="display: none;">The only active rule for cell birth should be 'neighbors > 4' and the cell death rule should be 'neighbors < X'. X is the same for both. Use the 'Random State' button if the board is blank.
                         </p>
                     </div>
                 </div>
             </div>
-
+            <div>&emsp;</div>
             <iframe
                 src="https://codesandbox.io/embed/conways-game-of-life-vxsmmm?hidenavigation=1&editorsize=0&hidenavigation=1&hidedevtools=1"
                 style="width:1280px;height:650px;border:0" title="CGOL" allow=""
