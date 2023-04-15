@@ -3,7 +3,7 @@
 document.querySelector(".right.arrow").addEventListener("click", transitionRight);
 
 function goToNextPage() {
-  window.location.href = '/lesson3'
+  window.location.href = '/further-discovery'
 }
 
 function transitionRight() {

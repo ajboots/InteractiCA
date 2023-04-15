@@ -9,8 +9,9 @@
     <link href="/css/lesson2.1.css" rel="stylesheet">
     <link href="/css/common.css" rel="stylesheet">
     <script src="/js/lesson2.1.js" type="module" defer></script>
-    <script src="/js/sketches/sketch1.1.js"></script>
     <script src="/js/common.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script> <!-- for p5.js library-->
+    <script src="/js/sketches/sketch2.1.js"></script>
     <title>2D Autonoma- InteractiCA</title>
 </head>
 
@@ -64,14 +65,14 @@
             </div>
             <h1>Part 1. Naibours</h1>
             <div class="container">
-                <div id="boxContainer"></div>
+                <div id="neighbourhoods2DContainer"></div>
             </div>
             <h1>Part 2. Patterns</h1>
             <p>&emsp;Use the "step" button in the interactive panel to step through the simulation</p>
 
 
             <div class="examples">
-                <div style="width: 50%; background-color: #d8d8d8; padding-left: 10px;">
+                <div style="width: 50%; padding-left: 10px;">
                     <h2>&emsp;Oscillators</h2>
                     <iframe src="https://codesandbox.io/embed/conways-step-6mojjc?hidedevtools=1"
                         style="width:450px;height: 475px; border:0" title="Conway&#039;s Step" allow=""
@@ -89,7 +90,7 @@
                     </div>
                 </div>
                 <div style="width: 10%; background-color: #ffffff;"></div>
-                <div style="width: 50%; background-color: #d8d8d8; padding-left: 10px;">
+                <div style="width: 50%; padding-left: 10px;">
                     <h2>&emsp;Spaceships</h2>
                     <iframe src="https://codesandbox.io/embed/conways-glider-g3lwrq?hidedevtools=1"
                         style="width:450px;height: 475px; border:0" title="Conway&#039;s Step" allow=""
@@ -107,7 +108,7 @@
                     </div>
                 </div>
                 <div style="width: 10%; background-color: #ffffff;"></div>
-                <div style="width: 50%; background-color: #d8d8d8; padding-left: 10px;">
+                <div style="width: 50%; padding-left: 10px;">
                     <h2>&emsp;Glider Guns</h2>
                     <iframe src="https://codesandbox.io/embed/gospergun-ih8wo3?hidedevtools=1"
                         style="width:450px;height: 475px; border:0" title="Glider Guns" allow=""
