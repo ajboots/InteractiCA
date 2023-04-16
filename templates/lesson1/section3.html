@@ -29,7 +29,7 @@
             </div>
             
             <div class="dropdown">
-                <h3><a class="dropdown-top nav-button" href="/lesson2.1">2D Automata <span style="font-size: 12pt">▼</span></a></h3>
+                <h3><a class="dropdown-top nav-button" href="/2D-Automata">2D Automata <span style="font-size: 12pt">▼</span></a></h3>
                 <div class="dropdown-content">
                     <a href="/2D-Automata/conways-rules">Conway's Rules</a>
                     <a href="/2D-Automata/cgol">Conway's Game of Life</a>
@@ -49,9 +49,46 @@
         <div class="content">
             <h1>Lesson 1.3 - Ruleset Exploration</h1>
 
+            <div class="introduction">
+                <p>
+                    In this lesson, you will get a chance to apply knowledge from previous sections to explore different CA rulesets!
+                </p>
+
+                <h3>Learning Objectives</h3>
+    
+                <p>
+                    By the end of Lesson 1.3, you should be able to...
+                </p>
+    
+                <ul>
+                    <li>Have a better understanding of how different rulesets for 1D ECA work</li>
+                    <li>Predict how differences in rulesets for ECA will affect changes between generations</li>
+                </ul>
+            </div>
+
             <p>
-                The following will allow you to simulate an automaton over several generations using a particular ruleset. To set the ruleset, either change the
-                rule number directly or toggle each individual rule.
+                The layout of this lesson is more flexible towards exploration, so feel free to spend as much or as little time on it.
+                It will serve as a culmination of the ideas that we have learned thus far.
+            </p>
+
+            <p>
+                Below, there is a simulation that is similar to that of previous lessons,
+                but with a couple changes to make it more flexible:
+
+                <ol>
+                    <li>The generation has a set grid, and will fill up over time, rather than creating new boxes</li>
+                    <li>You now able to change the ruleset of the CA. Use the familiar toggle buttons to change the ruleset and rule indicator</li>
+                    <li>The <b>Generate Next Step</b> button is now simply <b>Step ▶</b></li>
+                    <li>There is now a <b>Run ▶▶</b> button, which you can click for the simulation to continue running until you click <b>Stop ◼︎</b></li>
+                </ol>
+            </p>
+
+            <p>
+                Note that it is preloaded with Rule 30 and a single cell that is <i>on</i> in the center.
+            </p>
+
+            <p style="text-align: center">
+                <i>Explore the simulation, and see what interesting patterns you can create with 1D ECA.</i>
             </p>
 
             <div class="container">
@@ -132,8 +169,6 @@
                 <div class="container" id="stopButton"></div>
                 <div class="container" id="resetButton"></div>
             </div>
-
-            
         </div>
         <img class="right arrow" src="/images/arrow-button.png">
     </main>

@@ -52,7 +52,7 @@ var sketch1 = function ( sketch ) {
     }
     for (let g = generation + 1; g < 10; g++) {
       for (let i = 2; i < numCells - 2; i++) {
-        sketch.fill(255);
+        sketch.fill(230);
         let x = i * (cellSide + cellBuffer);
         let y = g * (cellSide + cellBuffer);
         sketch.square(x, y, cellSide);

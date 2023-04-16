@@ -1,3 +1,9 @@
+.introduction {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 0 20px 0 20px;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -199,4 +205,63 @@
 
 .incorrect {
   color:red;
+}
+
+.check-understanding {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(610px, 1fr));
+  grid-column-gap: 6px;
+  grid-row-gap:6px;
+  margin: 0;
+  align-items: center;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 600px;
+  height: 220px;
+}
+
+.answers button {
+  font-size: 12pt;
+  padding: 10px;
+  background-color: rgb(24, 124, 206);
+  border: solid black 2px;
+  border-radius: 10px;
+  color: white;
+}
+
+.answers button:hover {
+  cursor: pointer;
+}
+
+#rule-identification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-answer {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.text-answer input {
+  height: 40px;
+  width: 140px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.text-answer button {
+  margin: 20px;
+  font-size: 12pt;
+  padding: 10px;
+  background-color: rgb(24, 124, 206);
+  border: solid black 2px;
+  border-radius: 10px;
+  color: white;
 }

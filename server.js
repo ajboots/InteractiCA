@@ -33,18 +33,26 @@ app.get('/1D-Automata/ruleset-exploration', (req, res) => {
     res.sendFile(html_path + 'lesson1/section3.html');
 });
 
-app.get('/2D-Automata/conways-rules', (req, res) => {
-    res.sendFile(html_path + 'lesson2.2.html');
+app.get('/2D-Automata', (req, res) => {
+    res.sendFile(html_path + 'lesson2.html');
 });
-app.get('/2D-Automata/cgol', (req, res) => {
+
+app.get('/2D-Automata/conways-rules', (req, res) => {
     res.sendFile(html_path + 'lesson2.1.html');
 });
+
+app.get('/2D-Automata/cgol', (req, res) => {
+    res.sendFile(html_path + 'lesson2.2.html');
+});
+
 app.get('/2D-automata/ruleset-exploration', (req, res) => {
     res.sendFile(html_path + 'lesson2.3.html');
 });
+
 app.get('/further-discovery', (req, res) => {
     res.sendFile(html_path + 'implementations.html');
 });
+
 app.get('*', function(req, res){
     res.sendFile(html_path + 'error.html');
 });

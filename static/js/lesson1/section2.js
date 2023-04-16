@@ -62,7 +62,7 @@ document.getElementById("check").addEventListener("click", () => {
   }
 });
 
-// RULE GENERATION
+// RULE GENERATION CHALLENGE
 let rulegen = [false, false, false, false, false, false, false, false];
 let values = [128, 64, 32, 16, 8, 4, 2, 1];
 
@@ -109,3 +109,22 @@ function updateAddition() {
   }
   document.getElementById('ruleAddition').innerHTML = addition;
 }
+
+// RULE NUMBER CHALLENGE
+
+const ruleSubmit = document.getElementById('rule-submit');
+const ruleInput = document.getElementById('rule-input');
+const ruleFeedback = document.getElementById('rule-feedback');
+
+ruleSubmit.addEventListener("click", () => {
+  window.scrollBy(0, 80);
+  if (ruleInput.value == 30) {
+    ruleFeedback.innerHTML = "That's it! Rule 30 is a popular rule for ECA.";
+    ruleFeedback.classList.remove("incorrect");
+    ruleFeedback.classList.add("correct");
+  } else {
+    ruleFeedback.innerHTML = "Not quite! Remember the ways the rules are generated in binary. Match the ruleset you made with that process.";
+    ruleFeedback.classList.remove("correct");
+    ruleFeedback.classList.add("incorrect");
+  }
+});
