@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link href="/css/common.css" rel="stylesheet">
-    <link href="/css/index.css" rel="stylesheet">
+    <link href="/css/error.css" rel="stylesheet">
     <script src="/js/common.js" type="module" defer></script>
-    <script src="/js/index.js" type="module" defer></script>
     <title>InteractiCA</title>
 </head>
 <body>
@@ -41,32 +40,15 @@
         <image class="info-button" src="/images/info-button.png"></image>
     </header>
     <!-- ************************************** -->
-
-    <div id="top-image">
-        <h1 class="welcome header">Welcome to InteractiCA!</h1>
-        <p class="welcome description">A series of interactive lessons in cellular automata.</p>
-        <button onclick="window.location='/1D-Automata'">Get Started!</button>
-    </div>
-
     <main>
         <div class="content">
-            <h2>What are Cellular Automata?</h2>
-            <p>
-                A <b>cellular automaton</b> (CA) is a collection of cells which have state and change over time (plural <i>cellular automata</i>).
-                These changes are driven by rules around the current cell state and the state of cells around them.
-            </p>
-            <h2>Why should I learn about Cellular Automata?</h2>
-            <p>
-                Cellular automata has applications of many areas. It is present in places such as physics, biology, or even the behavior
-                of avalanches and traffic flow. It is also a great way to get hands-on experience in fundamental concepts of programming
-                and Computer Science. If any of this sounds interesting, or if you just want to learn how the cool patterns you see above are created,
-                InteractiCA is a great place to <a href="/1D-Automata/cells">start</a>.
-            </p>
-            <h2>What is this project?</h2>
-            <p>
-                This project is an independent study project created by two Computer Science Undergraduate Students. To learn more,
-                click the ( i ) in the top right corner!
-            </p>         
+
+          <div class="error">
+            <h2>Page Not Found</h2>
+            <img id="error-image" src="/images/404.jpeg">
+            <p>The page you requested could not be found.</p>
+          </div>
+
         </div>
     </main>
 </body>

@@ -15,7 +15,7 @@ function transitionRight() {
 document.querySelector(".left.arrow").addEventListener("click", transitionLeft);
 
 function goToPreviousPage() {
-  window.location.href = '/lesson2.2'
+  window.location.href = '/2D-Automata/cgol'
 }
 
 function transitionLeft() {

@@ -3,7 +3,7 @@
 document.querySelector(".right.arrow").addEventListener("click", transitionRight);
 
 function goToNextPage() {
-  window.location.href = '/lesson2.1';
+  window.location.href = '/2D-Automata/conways-rules';
 }
 
 function transitionRight() {
@@ -23,50 +23,35 @@ function transitionLeft() {
   setTimeout(goToPreviousPage, 500);
 }
 
-// RULES CHALLENGE
-let rules = [false, false, false, false, false, false, false, false];
+// RULE GENERATION
+let rulegen = [false, false, false, true, true, true, true, false];
 let values = [128, 64, 32, 16, 8, 4, 2, 1];
 
-document.querySelectorAll(".rules-button").forEach(button => {
+document.querySelectorAll(".rulegen-button").forEach(button => {
   button.addEventListener("click", () => {
     let rule = button.id.charAt(4);
-    if (rules[rule]) {
-      rules[rule] = false;
-      ruleOff(rule);
+    if (rulegen[rule]) {
+      rulegen[rule] = false;
+      ruleOffGen(rule);
     } else {
-      rules[rule] = true;
-      ruleOn(rule);
+      rulegen[rule] = true;
+      ruleOnGen(rule);
     } 
   });
 });
 
-function ruleOn(ruleNumber) {
-  document.getElementById("result" + ruleNumber).innerHTML = "◼︎";
+function ruleOnGen(ruleNumber) {
+  document.getElementById("resultgen" + ruleNumber).innerHTML = "◼︎";
   updateText();
 }
 
-function ruleOff(ruleNumber) {
-  document.getElementById("result" + ruleNumber).innerHTML = "◻";
+function ruleOffGen(ruleNumber) {
+  document.getElementById("resultgen" + ruleNumber).innerHTML = "◻";
   updateText();
 }
 
 function updateText() {
-  updateAddition();
-  let rulesBinary = rules.join().replaceAll("true", "1").replaceAll("false", "0").replaceAll(",", "");
+  let rulesBinary = rulegen.join().replaceAll("true", "1").replaceAll("false", "0").replaceAll(",", "");
   document.getElementById('ruleIndicator').removeAttribute('hidden');
   document.getElementById('ruleNumber').innerHTML = parseInt(rulesBinary, 2);
-}
-
-function updateAddition() {
-  let addition = "";
-  for (let i = 0; i < rules.length; i++) {
-    if (rules[i])
-      addition = addition + values[i] + " + "; 
-  }
-  if (addition.length != 0) {
-    addition = addition.slice(0, -3);
-  } else {
-    addition = "0";
-  }
-  document.getElementById('ruleAddition').innerHTML = addition;
 }
