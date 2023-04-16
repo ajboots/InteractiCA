@@ -121,8 +121,7 @@
   background-color: rgb(190, 226, 255); 
 }
 
-.rules-button p, .rulegen-button p, .rule51-button p 
-{
+.rules-button p, .rulegen-button p, .rule51-button p {
   font-size: 22pt;
   margin: 0;
 }
@@ -145,7 +144,7 @@
 }
 
 #check-feedback {
-  margin: 5px 0px 40px 0px;
+  margin: 5px;
 }
 
 .correct {

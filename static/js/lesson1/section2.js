@@ -52,11 +52,11 @@ let feedback = document.getElementById("check-feedback");
 document.getElementById("check").addEventListener("click", () => {
   window.scrollBy(0, 50);
   if (JSON.stringify(rules) == JSON.stringify(answers)) {
-    feedback.innerHTML = "Correct, that's rule 30!";
+    feedback.innerHTML = "Correct, that's the right rule!";
     feedback.classList.remove("incorrect");
     feedback.classList.add("correct");
   } else {
-    feedback.innerHTML = "Not quite. Try again! Remember you can scroll up to see more generations of rule 30 for help. ";
+    feedback.innerHTML = "Not quite, try again! Remember to look at how the changes in state for each generation affect the next. ";
     feedback.classList.remove("correct");
     feedback.classList.add("incorrect")
   }

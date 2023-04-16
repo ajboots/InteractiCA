@@ -31,9 +31,9 @@
         <div class="dropdown">
             <h3><a class="dropdown-top nav-button" href="/lesson2">2D Automata <span style="font-size: 12pt">▼</span></a></h3>
             <div class="dropdown-content">
-                <a href="/lesson2">Cells & Patterns</a>
-                <a href="/lesson2">Conway's Game of Life</a>
-                <a href="/lesson2">Ruleset Exploration</a>
+                <a href="/lesson2.1">Conway's Rules</a>
+                <a href="/lesson2.2">Conway's Game of Life</a>
+                <a href="/lesson2.3">Ruleset Exploration</a>
             </div>
         </div>
         
@@ -50,7 +50,7 @@
             <h1>Lesson 1.2: Elementary Cellular Automata</h1>
 
             <p>
-                Let's revisit our definition of cellular automata. In the previous lesson, you found that CA are composed
+                Let's revisit our definition of cellular automata. In the previous lesson, we found that CA are composed
                 of <i>cells that interact over time steps called generations</i>. For the purposes of this lesson, we will
                 focus on <b>Elementary Cellular Automata</b> (ECA): automata comprised of cells with <i>two states</i> and <i>rulesets depending on the state
                 of their nearest neighbors</i>. But what do we mean by <b>neighbors</b> and <b>rulesets</b>?
@@ -72,8 +72,8 @@
             <p>
                 A CA's <b>ruleset</b> defines the way that its cells interact. Remember the "flipping" automata from last lesson?
                 <i>The flipping nature describes that automata's ruleset.</i> We have provided the first two generations of that automata
-                below (given a predetermined initial state). <i>Notice that this automata only depends on the previous state of itself and
-                not its neighbors.</i>
+                below (given a predetermined initial state). <i>Notice that this automata's cells actually only depend on the previous state of themselves and
+                not their neighbors.</i>
             </p>
 
             <p style="text-align:center">
@@ -163,8 +163,8 @@
 
             <p>
                 The specific number assigned to a ruleset comes from the binary representation of <i>on and off</i> states. For example,
-                <i>00110011<sub>2</sub></i> is binary for <i>51</i>, the ruleset from the last lesson. Since there are 8 possible configurations of a cell with its immediate neighbors, this means
-                that there are 256 (2<sup>8</sup>) possible rulesets.
+                <i>00110011<sub>2</sub></i> is binary for <i>51</i>, the ruleset from the last lesson. Since there are 8 possible configurations of a cell with its immediate neighbors, 
+                there are 256 (2<sup>8</sup>) possible rulesets.
             </p>
 
             <p style="text-align:center">
@@ -241,12 +241,23 @@
                 <p id="ruleIndicator" hidden>This is rule <span id="ruleNumber"></span> <i>(Computed by adding: <span id="ruleAddition"></span>)</i>.</p>
             </div>
 
-            <h3>Challenge</h3>
+            <h3>Check Your Understanding</h3>
 
             <p>
-                Define the ruleset for this cellular automaton. Each generation is built off the previous one in the
-                same way that generation 2 is based on generation 1 (for example, generation 5 is based on generation 4).
-                Select each rule to toggle its output.
+                The following is the same generation simulation from the previous lesson. This time it is using a different ruleset. This
+                ruleset is often used when describing ECA because of its interesting patterns and chaotic nature. Try and figure
+                out which ruleset this is.
+            </p>
+
+            <div class="container" id="generatorContainer"></div>
+            <div class="container" id="generationLabel"></div>
+            <div id="buttons">
+                <div class="container" id="generateButton"></div>
+                <div class="container" id="resetButton"></div>   
+            </div>
+
+            <p>
+                Define the ruleset for this cellular automaton. Click each button to toggle the state of the cooresponding output cell.
             </p>
 
             <div class="rules-challenge">
@@ -298,7 +309,9 @@
                 <p id="check-feedback"></p>
             </div>
 
-            
+            <p>
+                What is the rule number for this ruleset?
+            </p>
 
 
         </div>
