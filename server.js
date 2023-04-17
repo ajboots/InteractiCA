@@ -13,48 +13,48 @@ const html_path = __dirname + '/docs/';
 
 // ******* HTTP ROUTES ******** //
 
-app.get('/', (req, res) => {
+app.get('/InteractiCA', (req, res) => {
     res.sendFile(html_path + 'index.html');
 });
 
-app.get('/1D-Automata', (req, res) => {
+app.get('/InteractiCA/1D-Automata', (req, res) => {
     res.sendFile(html_path + '1D-Automata/index.html');
 });
 
-app.get('/1D-Automata/cells', (req, res) => {
+app.get('/InteractiCA/1D-Automata/cells', (req, res) => {
     res.sendFile(html_path + '1D-Automata/cells.html');
 });
 
-app.get('/1D-Automata/cell-interactions', (req, res) => {
+app.get('/InteractiCA/1D-Automata/cell-interactions', (req, res) => {
     res.sendFile(html_path + '1D-Automata/cell-interactions.html');
 });
 
-app.get('/1D-Automata/ruleset-exploration', (req, res) => {
+app.get('/InteractiCA/1D-Automata/ruleset-exploration', (req, res) => {
     res.sendFile(html_path + '1D-Automata/ruleset-exploration.html');
 });
 
-app.get('/2D-Automata', (req, res) => {
+app.get('/InteractiCA/2D-Automata', (req, res) => {
     res.sendFile(html_path + '2D-Automata/index.html');
 });
 
-app.get('/2D-Automata/conways-rules', (req, res) => {
+app.get('/InteractiCA/2D-Automata/conways-rules', (req, res) => {
     res.sendFile(html_path + '2D-Automata/conways-rules.html');
 });
 
-app.get('/2D-Automata/cgol', (req, res) => {
+app.get('/InteractiCA/2D-Automata/cgol', (req, res) => {
     res.sendFile(html_path + '2D-Automata/cgol.html');
 });
 
-app.get('/2D-Automata/ruleset-exploration', (req, res) => {
+app.get('/InteractiCA/2D-Automata/ruleset-exploration', (req, res) => {
     res.sendFile(html_path + '2D-Automata/ruleset-exploration.html');
 });
 
-app.get('/further-discovery', (req, res) => {
+app.get('/InteractiCA/further-discovery', (req, res) => {
     res.sendFile(html_path + 'further-discovery.html');
 });
 
 app.get('*', function(req, res){
-    res.sendFile(html_path + 'error.html');
+    res.sendFile(html_path + '404.html');
 });
 
 // ***************************** //
