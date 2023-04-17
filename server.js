@@ -6,10 +6,10 @@ const app = express();
 const PORT = 3000;
 
 // Designate the public folder as serving static resources
-app.use(express.static('static'));
+app.use(express.static('docs'));
 
 // Set path to find html pages to serve
-const html_path = __dirname + '/templates/';
+const html_path = __dirname + '/docs/';
 
 // ******* HTTP ROUTES ******** //
 
