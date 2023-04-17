@@ -3,7 +3,7 @@
 document.querySelector(".right.arrow").addEventListener("click", transitionRight);
 
 function goToNextPage() {
-  window.location.href = '/2D-Automata/cgol'
+  window.location.href = '/InteractiCA/2D-Automata/cgol'
 }
 
 function transitionRight() {

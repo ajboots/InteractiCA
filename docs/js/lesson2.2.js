@@ -3,7 +3,7 @@
 document.querySelector(".right.arrow").addEventListener("click", transitionRight);
 
 function goToNextPage() {
-  window.location.href = '/2D-Automata/ruleset-exploration'
+  window.location.href = '/InteractiCA/2D-Automata/ruleset-exploration'
 }
 
 function transitionRight() {

@@ -3,7 +3,7 @@
 document.querySelector(".right.arrow").addEventListener("click", transitionRight);
 
 function goToNextPage() {
-  window.location.href = '/further-discovery'
+  window.location.href = '/InteractiCA/further-discovery'
 }
 
 function transitionRight() {
@@ -15,7 +15,7 @@ function transitionRight() {
 document.querySelector(".left.arrow").addEventListener("click", transitionLeft);
 
 function goToPreviousPage() {
-  window.location.href = '/2D-Automata/cgol'
+  window.location.href = '/InteractiCA/2D-Automata/cgol'
 }
 
 function transitionLeft() {
