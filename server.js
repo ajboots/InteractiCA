@@ -6,7 +6,7 @@ const app = express();
 const PORT = 3000;
 
 // Designate the public folder as serving static resources
-app.use(express.static('docs'));
+app.use('/InteractiCA', express.static('docs'));
 
 // Set path to find html pages to serve
 const html_path = __dirname + '/docs/';
@@ -51,10 +51,6 @@ app.get('/InteractiCA/2D-Automata/ruleset-exploration', (req, res) => {
 
 app.get('/InteractiCA/further-discovery', (req, res) => {
     res.sendFile(html_path + 'further-discovery.html');
-});
-
-app.get('*', function(req, res){
-    res.sendFile(html_path + '404.html');
 });
 
 // ***************************** //
