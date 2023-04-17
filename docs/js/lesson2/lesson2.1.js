@@ -3,7 +3,7 @@
 document.querySelector(".right.arrow").addEventListener("click", transitionRight);
 
 function goToNextPage() {
-  window.location.href = '/InteractiCA/1D-Automata/cells'
+  window.location.href = '/InteractiCA/2D-Automata/cgol'
 }
 
 function transitionRight() {
@@ -15,7 +15,7 @@ function transitionRight() {
 document.querySelector(".left.arrow").addEventListener("click", transitionLeft);
 
 function goToPreviousPage() {
-  window.location.href = '/InteractiCA'
+  window.location.href = '/InteractiCA/1D-Automata/ruleset-exploration'
 }
 
 function transitionLeft() {

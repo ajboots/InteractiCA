@@ -13,6 +13,10 @@ const html_path = __dirname + '/docs/';
 
 // ******* HTTP ROUTES ******** //
 
+app.get('/', (req, res) => {
+    res.redirect('/InteractiCA');
+});
+
 app.get('/InteractiCA', (req, res) => {
     res.sendFile(html_path + 'index.html');
 });
