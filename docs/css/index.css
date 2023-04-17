@@ -20,7 +20,7 @@
 }
 
 #top-image {
-  background-image: url("/images/home-images/ca-30.gif");
+  background-image: url("images/home-images/ca-30.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
