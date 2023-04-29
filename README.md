@@ -1,12 +1,16 @@
-# Cellular Education
-Interactive education about cellular automata
+# InteractiCA
 
-## To run the final-project Next.js App
-1. Ensure you are in the `final-project` directory
-2. Run `npm install` to update all dependencies
-3. Run `npm run dev` to run the project in development mode
+A series of interactive lessons in cellular automata.
 
-## To run the new proposed project structure
-1. Pull repo changes and swtich to the `cwfields/newProjectStructure` branch
-2. Run `npm install` to update all dependencies
-3. Run `npm start` to run the project
+> Alex Boots (ajboots@ncsu.edu)  
+> Christopher Fields (cwfields@ncsu.edu) 
+
+### [go.ncsu.edu/interactica](https://ajboots.github.io/InteractiCA/)  
+
+## What is this project?
+
+This is a project developed with the purpose of teaching the concepts of cellular automata while developing the skills of computational thinking in users. As the developer's of this project, we hope that users are able to learn a little more about cellular automata and be inspired to create more with the foundational skills given in these lessons.
+
+## Guide to developing InteractiCA
+
+Are you a developer that would like to work on this project? Navigate to the [Wiki](https://github.com/ajboots/InteractiCA/wiki) for this project for more information on *developing InteractiCA*.
