@@ -9,7 +9,7 @@ A series of interactive lessons in cellular automata.
 
 ## What is this Project?
 
-This is a project developed with the purpose of teaching the concepts of cellular automata while developing the skills of computational thinking in users. As the developer's of this project, we hope that users are able to learn a little more about cellular automata and be inspired to create more with the foundational skills given in these lessons.
+This is a project developed with the purpose of teaching the concepts of cellular automata while developing the skills of computational thinking in users. As the developers of this project, we hope that users are able to learn a little more about cellular automata and be inspired to create more with the foundational skills given in these lessons.
 
 ## Guide to Developing InteractiCA
 
