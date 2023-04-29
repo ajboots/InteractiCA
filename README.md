@@ -13,4 +13,4 @@ This is a project developed with the purpose of teaching the concepts of cellula
 
 ## Guide to Developing InteractiCA
 
-Are you a developer that would like to work on this project? Navigate to the [Wiki](https://github.com/ajboots/InteractiCA/wiki/InteractiCA:-A-Developer's-Guide) for this project for more information on *developing InteractiCA*.
+Are you a developer that would like to work on or navigate the source code for our project? Navigate to the [Wiki](https://github.com/ajboots/InteractiCA/wiki/InteractiCA:-A-Developer's-Guide) for this project for more information on *developing InteractiCA*.
