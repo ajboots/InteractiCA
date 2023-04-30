@@ -80,7 +80,8 @@
                 mathematician John Horton Conway in 1970.
                 This CA is famous for its variety of patterns and interesting properties. Conway's game of life is
                 <b>turing complete</b> so can simulate any turing machine.
-                Conway's game is traditionally played on an infnite grid. For ease of use, we will play on a torus.
+                Conway's game is traditionally played on an infnite grid. For ease of use, we will play on a <a href="https://en.wikipedia.org/wiki/Torus" target="blank">torus</a>.
+                In short, you can imagine cells on the left/right and top/bottom sides to be touching.
             </p>
             <h3>Conway's Rules</h3>
             <p style = "padding-left: 20px;">
@@ -96,7 +97,8 @@
                 4. Any dead cell with exactly three live neighbours becomes a live cell, by reproduction.<br />
             </p>
             <h1>Part 2. Patterns</h1>
-            <p>&emsp;Step through each pattern and note how many steps it takes for a pattern to repeat</p>
+            <p style = "padding-left: 20px;">Step through each pattern using the <b>Step</b> button and note how many steps it takes for a pattern to repeat.
+                To reset the simulation, use the ⟳ button in the top left.</p>
 
 
             <div class="examples" style="padding-left: 5%;">
@@ -112,7 +114,8 @@
                     <div style="display: flex; flex-direction: column; padding-left: 10%;">
                         <p>Repeating patterns are known as oscillators</p>
                         <p>The steps to repeat is an oscillator's period</p>
-                        <p>What is the period of the Pulsar pattern?</p>
+                        <p><i>The pattern on the left is an ocillator called the <b>Pulsar Pattern</b></i></p>
+                        <p>What is the period of the Pulsar Pattern?</p>
                         <div>
                             <button class="multiplechoice" onclick="checkAnswer(1, 3, 1)">1 Step</button>
                             <button class="multiplechoice" onclick="checkAnswer(2, 3, 1)">2 Steps</button>
@@ -154,7 +157,7 @@
                         </iframe>
                     </div>
                     <div style="display: flex; flex-direction: column; padding-left: 10%;">
-                        <p>Glider guns are oscillators that make spaceships</p>
+                        <p>Glider guns are oscillators that make spaceships called <b>gliders</b></p>
                         <p>The first glider gun won a $50 prize ($400 today)</p>
                         <p>What is the period of the gliders this gun makes?</p>
                         <div>

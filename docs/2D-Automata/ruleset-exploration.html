@@ -81,16 +81,14 @@
                     <div style="display: flex; flex-direction: column; padding-right: 10px">
                         <h3>Maze Generator</h3>
                         <p>With some modifications to the rules, these cells can create a maze-like pattern. Experiment
-                            and
-                            try
-                            to
-                            find it yourself</p>
+                           and try to find it yourself! When complete, it should something like this:</p>
+                        <img src="../images/maze-expected.png">
+                        <p>Can't find it? Feel free to use the hints below:</p>
                         <button class="hint-button";
                             onclick="document.getElementById('mazehint1').style.display = 'block'; this.style.display = 'none';">Reveal
                             Hint</button>
                         <p id="mazehint1" style="display: none;">Only one rule needs to be changed. Use the reset button
                             in the bottom left to reset rules</p>
-
                         <button class="hint-button";
                             onclick="document.getElementById('mazehint2').style.display = 'block'; this.style.display = 'none';">Reveal
                             Hint</button>
@@ -105,8 +103,10 @@
                     <div style="display: flex; flex-direction: column;">
                         <h3>Cave Generator</h3>
                         <p>Some video games use cellular automata to create cave-like levels. Experiment to find this
-                            ruleset.
+                            ruleset. When complete, it should look something like this:
                         </p>
+                        <img src="../images/cave-expected.png">
+                        <p>Can't find it? Feel free to use the hints below:</p>
                         <button class="hint-button";
                             onclick="document.getElementById('cavehint1').style.display = 'block'; this.style.display = 'none';">Reveal
                             Hint</button>
